@@ -177,3 +177,6 @@ The video isn’t uploading properly, please hold
 ### 4.1.3 – Modeling for FreeCAD users
 As mentioned in the introduction, this section will be making use of a cycloidal disk generated using the FCGear workbench, so start by installing it through the Addon Manager (in the Tools tab) or through the manual instructions found on the wiki page (link to wiki). It should be noted that while cycloidal disk generation is a feature of the FCGear workbench, it is not documented on its wiki.freecadweb.org page.
 
+### 4.1.4 – Generating the disk
+
+    • Create a new file and and a new Part Design body. This guide will be using the Part Design workbench for all modeling except for the generation of the disk.
