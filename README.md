@@ -32,9 +32,9 @@ Cycloidal drives offer a relatively high torque density, especially compared to 
 
 Hypocycloidal paths are the same as cycloidal paths, except the circle is rolling around another circle instead of on a straight line.
 
-![lazycy2](https://user-images.githubusercontent.com/79012344/120703537-6fc6ee00-c483-11eb-83df-f946946918f4.gif)
+<img src="https://user-images.githubusercontent.com/79012344/120703537-6fc6ee00-c483-11eb-83df-f946946918f4.gif" width="400">
 
-
+While every element of a cycloidal drive is not a direct product of this concept, they all have something to do with the idea of a circle rolling around within another circle, so just keep that in mind.
 
 
 
