@@ -1,4 +1,4 @@
-Note – this is a work in progress draft
+Note – this is a work in progress draft, more things will be copied across when finished
 
 # Sections
 ## 1 – Intro
