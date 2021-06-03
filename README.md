@@ -179,4 +179,4 @@ As mentioned in the introduction, this section will be making use of a cycloidal
 
 ### 4.1.4 – Generating the disk
 
-    • Create a new file and and a new Part Design body. This guide will be using the Part Design workbench for all modeling except for the generation of the disk.
+* Create a new file and and a new Part Design body. This guide will be using the Part Design workbench for all modeling except for the generation of the disk.
