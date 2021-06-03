@@ -1,3 +1,5 @@
+Note – this is a work in progress draft
+
 # Sections
 ## 1 – Intro
 ## 2 – The concepts and components
