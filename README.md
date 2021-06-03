@@ -190,7 +190,8 @@ As mentioned in the introduction, this section will be making use of a cycloidal
    * disk_height
     * The thickness of the individual disks generated
      * This should be set to the thickness of the center bearing
-   (default settings screenshot)
+
+(default settings screenshot)
 
         ◦ Base
             ▪ Label
