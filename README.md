@@ -96,3 +96,69 @@ The best way to conceptualize driven housing designs is to imagine the housing a
 Now, when the housing interacts with the disk, the disk can’t rotate but the housing can, so it does.
 
 > place holder for video, please hold
+
+Of course, the housing needs to be kept centered, won’t survive much torsion if only supported on one side, and the forces applied to it shouldn’t be transferred to the cycloidal disk, so it’s stabilized by a bearing on the top and bottom. The bottom bearing connects to the motor plate, and the top bearing connects to a plate that has screws running down through the drive pins to connect to the motor plate.
+
+> photo
+
+### 3.1.3 – A note on stacked disks
+
+While not utilized in this guide, it is common practice to reduce the vibration caused by the off center rotation of the cycloidal disk by having 2 disks in the same housing 180 degrees offset from each other. 
+
+![Screenshot from 2021-06-03 16-28-52](https://user-images.githubusercontent.com/79012344/120707902-ddc1e400-c488-11eb-9ce5-67808c2e525d.png)
+
+These disks will rotate in the same direction and at the same speed so their output holes still line up with each other (provided they are symmetrical across both the x and y axis). This means that while rotation is still taking place, the shifting weight of one disk is always offset by the other. To accomplish this the eccentric shaft is split into 2 cams so the top and bottom disks are driven 180 degrees offset from each other.
+
+> Screenshot from 2021-06-03 16-28-52
+
+## 3.2 – Bearings – an epic saga
+Anyone genuinely considering manufacturing a cycloidal drive by means of 3D printing will have likely noticed the very high number of surfaces that need to be in contact with each other in even the most basic of cycloidal designs. The good news is that all but the edge face of the cycloidal disk can be replaced by a friction reducing element, however this may not always be the best design decision. At any rate, a cycloidal drive that will carry any sort of load requires at the very least 2 bearings: 1 in the center of the cycloidal disk and another to keep the output ring centered. 
+
+### 3.2.1 – The required bearings – cycloidal disk
+The bearing in the center of the cycloidal disk both relies on and can limit some of the primary dimensions of the cycloidal drive, so care should be taken when finding a bearing to use. Firstly, keep in mind that this bearing is what makes it possible to use an eccentric shaft, so some thought needs to be given to the inner dimension of the bearing so that the the desired level of eccentricity is both possible and won’t create a situation where the hole in the eccentric shaft that accepts the input shaft of the motor is extremely thin on one side. 
+
+> (image)
+
+A good rule of thumb is that (assuming the eccentric shaft is accepting a metal output shaft from the motor) the inner diameter of the bearing should be equal to the diameter of the motor output shaft plus the disk’s eccentricity plus however thick you want the thinnest part of the eccentric shaft to be (at least 3mm).
+
+> (bearing spacing inkscape image)
+
+Another point to consider is that the cycloidal disk should be a similar thickness to the bearing. This ensures that the bearing will be able to transfer power to the entire edge of the cycloidal disk. It’s also a good idea to have a ridge of some sort modeled in the hole for the bearing so it can be pressure fit until bottoming out.
+
+> (Image of ridge)
+
+One final element of note is that, especially with a 3D printed disk, the bearing is likely to be the heaviest spinning component, and will be spinning off center to the rest of the assembly. This can be dealth with by using a stacked design (see 3.1.1), but suffice it to say that a lighter bearing will create less vibration.
+
+### 3.2.2 – The required bearings – output pins / output ring
+To center the output disk/pins to the housing, it is advised that a relatively large bearing with an inner diameter that is able to fit around the outside of the output disk, and is therefore larger than the outer edge of the output pins. This then mounts into the housing.
+
+> (image)
+
+This method allows the forces applied to the output ring to be braced against the housing, which can be reinforced depending on the load required. While this method is strong and robust, it does have some drawbacks. Cost is by far the largest issue bearings of this specification can add to a project, with the example bearings (inner diameter = 45mm, outer diameter = 85mm, thickness = 7mm) costing roughly $10 per bearing, which can get quite expensive for something like a quadrupedal robot, especially when using cycloidal designs that require 2 output bearings (3.1.2). These larger bearings are also quite heavy, the aforementioned bearings in particular weigh ~50g.
+
+### 3.2.3 – Output pins
+
+Using something other than 3D printed plastic for output pins is by far the most valuable upgrade one can make to their budget cycloidal drive, because it increases the strength of the assembly by a massive degree without adding too many more individual components. The drawbacks of 3D printing output pins is quite obvious when one considers the relatively low force required to sheer off the pins on the layer lines. 
+
+> (Image of pins, failure gif, image of sheered pins)
+
+The 2 routes one can take in making reinforced output pins are using small bearings or using round nylon standoff spacers in place of 3D printed output pins. The only real difference from a modeling and construction perspective is that rather than modeling pins to be printed on the output disk, one would have holes through it, potentially with hexagonal holes on the other side going partially through it to capture a nut. And of course a bolt/screw and a nut is necessary to keep the bearing / nylon spacer in place.
+
+> (image)
+
+This guide uses 7mm outer diameter 3mm inner diameter nylon spacers as output pins.
+
+### 3.2.4 - Drive pins
+Using bearings in place of 3D printed drive pins can significantly reduce wear and friction within a cycloidal drive, however these benefits come with increased weight, drive pin diameter, cost, and complexity. To that end this guide did not include testing with bearings in place of drive pins and  does not have modeling instructions for them. 
+
+### 3.2.5 – A note on pressure fitting bearings
+This guide requires a fair number of bearings to be pressure fit into 3D printed housings, so some thought and testing of bearing fitment should be done before printing components. It is therefore advised that you create test pieces for bearings to fit into / to fit into bearings and undergo some trial and error to find dimensions that can tightly hold or fit into a bearing without being deformed by it or requiring forceful persuasion (Take it from someone who’s broken a bearing with a hammer). When making test pieces, be sure to use the same print settings as on the final components. Time spent in this process will save on test prints down the line.
+
+## 3.3 – Choosing the best output pin circle
+The output pin circle is the reference circle that passes through the center of the output holes on the cycloidal disk and through the center of the drive pins as mentioned in section 2.5. Especially on the smaller cycloidal disks used in this guide, it is of the upmost importance to ensure that the output holes on the cycloidal disk have enough material surrounding them as to not create weak thin spots in the disk for deformation or cracking to occur. A good rule of thumb is to have the output pin circle roughly centered on the disk.
+
+>(image)
+
+However, this is not always possible because the inner diameter of the drive bearing can limit the maximum size of the output pin circle, and should also be taken into account. This is why the output holes on the reference models provided are not perfectly centered on the cycloidal disk.
+
+# 4 – Design & CAD
