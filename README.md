@@ -346,3 +346,25 @@ Example:
 To create a motor mount, create a sketch on the bottom face of the housing with an outer diameter matching that of the housing, and holes for the motor screws and a space for the drive shaft to enter the housing.
 
 Model:
+
+![image](https://user-images.githubusercontent.com/79012344/120710649-6726e580-c48c-11eb-9255-02e32c741d8a.png)
+
+For the example nema 17 motor, a centered square pattern of 4 m3 screws spaced 31mm from each other. The center hole must be at least the outer diameter of the eccentric shaft, however if a bearing is desired to brace the input shaft, be sure to include spacing for the bearing.
+
+The screw holes will need to be countersunk to avoid the cycloidal disk fouling on them. So, when extruding the motor mount plate, take into account both the space taken by countersinking the screws and having enough material for them to mount to. In this case, the screw heads are 2mm tall and ~6mm in diameter, so the bottom plate will be extruded 5mm to allow for 2mm of countersinking and 3mm of material underneath them.
+
+Model:
+
+![image](https://user-images.githubusercontent.com/79012344/120710667-6db55d00-c48c-11eb-89cd-cfe463059f3f.png)
+
+Finally a chamfer (1mm) should be applied to the screw countersink holes to minimize friction between their edge and the disk.
+
+Model:
+
+![image](https://user-images.githubusercontent.com/79012344/120710693-7443d480-c48c-11eb-8333-1fdd41e25dea.png)
+
+# Sections about the output disk and eccentric shaft still being finalized
+
+# 6 – Closing
+
+## 6.1 – Sources
