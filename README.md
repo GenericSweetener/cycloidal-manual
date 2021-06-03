@@ -183,15 +183,6 @@ As mentioned in the introduction, this section will be making use of a cycloidal
 * Within the body, use the “Gear” workbench to create a new hypocyloid gear ![image](https://user-images.githubusercontent.com/79012344/120709101-70af4e00-c48a-11eb-845b-1f0beacbdb09.png)
 * Notice that it generated 2 separate disks and a set of pins, however these pins and extra disk will be disabled shortly
 * Selecting the hypocycloid gear that was generated in the combo view will allow for the adjustment of all perimeters, the details of which are listed below:
-  * Base
-   * Label
-    * The label of the model within FreeCAD.
-  * Disks
-   * disk_height
-    * The thickness of the individual disks generated
-     * This should be set to the thickness of the center bearing
-
-(default settings screenshot)
 
         ◦ Base
             ▪ Label
@@ -244,3 +235,12 @@ As mentioned in the introduction, this section will be making use of a cycloidal
             ▪ version
                 • Indicates the version of FCGear used to generate the gear
                     ◦ It cannot be changed
+
+### 4.1.5 – Output holes
+The disk generated will be offset on the x axis by the amount of eccentricity, which makes automatically spacing the output holes on a reference circle centered to the center of the disk rather than the origin of the model difficult, and can make creating the holes correctly after exporting to another program difficult. Ideally the disk would be moved to be centered in reference to the origin of the model, but I had difficulty making that work in the part design workbench. Those more familiar with FreeCAD may have a better solution to what is about to be shown, but this does work.
+
+First, create a sketch mapped to the top face of the disk, and use the link to external geometry tool on the center circle. 
+
+![image](https://user-images.githubusercontent.com/79012344/120709780-4a3de280-c48b-11eb-9455-85a9573c8cf3.png)
+
+You can see the dependency between the center of the disk and the origin of the model here. Next toggle on construction mode ![image](https://user-images.githubusercontent.com/79012344/120709812-545fe100-c48b-11eb-9b20-0e137fddffd5.png) and use the “create a regular polygon” tool to first select a shape with the same number of points as you require output holes, and then create it centered to the linked external geometry. To fully constrain the sketch be sure to do something to fix the rotation of the regular polygon. In this case, a square is used to create 4 holes.
