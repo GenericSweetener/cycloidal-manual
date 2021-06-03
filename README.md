@@ -1,5 +1,3 @@
-A complete beginners guide to creating low-cost 3D printed cycloidal drives, complete with reference models.
-
 # Sections
 ## 1 – Intro
 ## 2 – The concepts and components
