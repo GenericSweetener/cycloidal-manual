@@ -244,3 +244,72 @@ First, create a sketch mapped to the top face of the disk, and use the link to e
 ![image](https://user-images.githubusercontent.com/79012344/120709780-4a3de280-c48b-11eb-9455-85a9573c8cf3.png)
 
 You can see the dependency between the center of the disk and the origin of the model here. Next toggle on construction mode ![image](https://user-images.githubusercontent.com/79012344/120709812-545fe100-c48b-11eb-9b20-0e137fddffd5.png) and use the “create a regular polygon” tool to first select a shape with the same number of points as you require output holes, and then create it centered to the linked external geometry. To fully constrain the sketch be sure to do something to fix the rotation of the regular polygon. In this case, a square is used to create 4 holes.
+
+![image](https://user-images.githubusercontent.com/79012344/120709872-6a6da180-c48b-11eb-9a79-79a36d67a1f2.png)
+
+Toggle out of construction mode and place a circle on each point, set them equal to each other, and then set their diameter. In this case, 7mm diameter nylon pins are used for the output pins and the disk has a 0.8mm eccentricity. However, the printer and filament used for testing has a habit of shrinking the final model slightly, so 0.1mm was added to the theoretical diameter (7.8) of the output holes.
+
+Set the diameter of the reference circle. For more information on determining the best pin and reference circle dimensions, see 3.3.
+
+![image](https://user-images.githubusercontent.com/79012344/120709944-85d8ac80-c48b-11eb-9532-ee564a8ff620.png)
+
+Finally, use this sketch to cut a pocket through the disk.
+
+![image](https://user-images.githubusercontent.com/79012344/120709967-8d985100-c48b-11eb-8a98-f56444e4f0f7.png)
+
+## 4.2 – Housing
+The primary function of a cycloidal drive’s housing is to support the drive pins and accept bearings for the output disk(s), and to that end, while being one of the more complex elements from a modeling perspective, is still a relatively simple component to create.
+
+### 4.2.1 – The main body
+When modeling the housing, it’s best to start with the section that will contain the drive pins and work outwards from there. The goal of this section is to mold the drive pins into the housing for extra support rather than have them free standing.
+
+Example:
+![image](https://user-images.githubusercontent.com/79012344/120710070-b4568780-c48b-11eb-841b-23003f12eb4e.png)
+
+The most important value to consider here is the inner diameter of the hollow cylinder that makes up this section. The pins contact with the housing should be maximized, but not the the point of  interfering with the cycloidal disk’s travel. 
+
+Example:
+![image](https://user-images.githubusercontent.com/79012344/120710099-bcaec280-c48b-11eb-9a89-a7abdba5f51f.png)
+
+To accomplish this, first take the pin circle diameter (remember to convert from the radius) as determined in (SECTION), and then subtract the pin diameter from it. In this example that would be 56 – 2.7 = 53.3. This gives a circle around the inner edge of the pins:
+
+Example:
+![image](https://user-images.githubusercontent.com/79012344/120710136-c6d0c100-c48b-11eb-8037-563e30016fae.png)
+
+Because the eccentricity of the disk is just effectively how far it extends towards the pins and how deep the troughs are, adding 4 times the eccentricity to this value will give the maximum diameter of the area the disk will travel in, and thus the minimum size for the inner diameter of this part of the housing. In this case, 53.3 + 4(0.8) = 56.5. Multiplying the eccentricity by 4 may seem counter intuitive at first, but remember that it refers to the height of the peaks and depths of the troughs in terms of a center line in the middle of them, hence multiplying it by 2, and it is also in terms of the radius, so when working with diameters one has to multiply it by 2 again.
+
+This plus preferably an extra 0.5mm at least (preferably more, but when working at this scale there simply isn’t much space to be spared) for extra clearance to accommodate for the disk being slightly too large or the housing flexing gives the inner diameter for the pin section of the housing.
+
+
+The outer diameter  of this section will determine the external diameter of the rest of the gearbox, and may need to change later depending on if the bearing for the output disk requires more space to be mounted. This value should be no less than 3mm to prevent significant flexing of the housing.
+
+Model:
+![image](https://user-images.githubusercontent.com/79012344/120710160-ce906580-c48b-11eb-851c-71300c44abcf.png)
+
+This section is then extruded to the thickness of the disk that will be within it plus a millimeter or so of extra clearance to prevent it from rubbing on the top and bottom of the gearbox. In this case, the housing will be extruded by 8mm.
+
+Model:
+![image](https://user-images.githubusercontent.com/79012344/120710184-d5b77380-c48b-11eb-8363-3e20c13e3f84.png)
+
+## 4.2.2 – Drive pins
+
+The number of pins, their diameter, and their reference circle diameter were all determined in section (SECTION), so now all there is to do is model them appropriately. In this case, 31 pins (remember that the number of pins is one more than the number of lobes on the disk) with diameters of 2.7mm, on a reference circle with a radius of 28mm. Rather than model each pin in one sketch, a single pin will be modeled, extruded, and copied in a polar pattern. While not necessary, to have the pin line up visually with the default position of the disk generated in section 4.1, align this first pin on the x axis to the left of the y axis as seen in the model below.
+
+Model:
+![image](https://user-images.githubusercontent.com/79012344/120710219-e10a9f00-c48b-11eb-94f9-71ae9a8c9a9b.png)
+
+The pin is then padded to the same thickness as the ring, in this case 8mm, and then copied in a polar pattern, in this case 31 times.
+
+Model:
+![image](https://user-images.githubusercontent.com/79012344/120710246-e9fb7080-c48b-11eb-8a8d-bf5811f2463f.png)
+
+### 4.2.3 – Bearing mounts
+
+For both moving housing designs and output disk designs, there is a requirement for a large bearing at the top of the housing to center the output disk. The only difference between the two designs’ housings is that moving housing gearboxes will have another bearing on the bottom of the housing, and output disk variants will have a bearing at the top and a motor mount on the bottom. 
+
+This is where cooperation between bearing choice and housing size come into play, because the ideal outer diameter for the output bearing is slightly larger than the inner diameter of the housing.  IT should be such that the hole it press fits into does not hang over the rest of the housing, which both means that during construction the disk can be inserted and during printing support material is not required. The outer diameter of the bearing should also not be too large as to require the housing’s total diameter to be increased to accommodate for it. To that end, a bearing with an outer diameter of 58mm was used. This was as close to perfect as the size constraints and bearing availability would allow.
+
+Example:
+
+![image](https://user-images.githubusercontent.com/79012344/120710303-ff709a80-c48b-11eb-9654-78ae81c9453b.png)
+
