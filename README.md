@@ -162,3 +162,18 @@ The output pin circle is the reference circle that passes through the center of 
 However, this is not always possible because the inner diameter of the drive bearing can limit the maximum size of the output pin circle, and should also be taken into account. This is why the output holes on the reference models provided are not perfectly centered on the cycloidal disk.
 
 # 4 – Design & CAD
+
+## 4.1 – Cycloidal disk
+This guide uses the process of modeling the cycloidal disk as the focal point for setting all major parameters of the cycloidal drive. To that end, the specific parameters to be considered and their effects on the final product will be discussed in this section.
+
+### 4.1.1 – Why FreeCAD?
+The two most common ways to model a cycloidal disk are mathematically defining it from scratch as a curve, or using a disk generation tool that creates a disk based on easily inputted parameters. This guide is aimed at beginners to cycloidal gearing, and so it was decided that a disk generation tool should be used to lower the overall difficulty for the end user. Because FreeCAD was used for all the modeling in this project, the FCGear workbench (link to wiki) was used to generate the disk. However, because this guide is intended to be usable agnostic of the chosen modeling software, this section has been split into a video which walks a user through the complete process, from installing FreeCAD to exporting the disk for printing; and a written section intended for those already familiar with FreeCAD.
+
+If, however, you would prefer to mathematically define the disk in the program of your choice, this paper has been provided to aid in that process (link)
+
+### 4.1.2 – Modeling for complete FreeCAD beginners
+The video isn’t uploading properly, please hold
+
+### 4.1.3 – Modeling for FreeCAD users
+As mentioned in the introduction, this section will be making use of a cycloidal disk generated using the FCGear workbench, so start by installing it through the Addon Manager (in the Tools tab) or through the manual instructions found on the wiki page (link to wiki). It should be noted that while cycloidal disk generation is a feature of the FCGear workbench, it is not documented on its wiki.freecadweb.org page.
+
