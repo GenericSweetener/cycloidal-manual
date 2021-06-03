@@ -313,3 +313,36 @@ Example:
 
 ![image](https://user-images.githubusercontent.com/79012344/120710303-ff709a80-c48b-11eb-9654-78ae81c9453b.png)
 
+The modeling of this is extremely simple, only requiring a sketch on the top face of the housing with a central hole capable of fitting the bearing, in this case 58.15mm, and an external diameter set equal to the other housing section. If the bearing section’s wall is too thin (preferably 3mm), increase the overall diameter.
+
+Model:
+
+![image](https://user-images.githubusercontent.com/79012344/120710410-1adba580-c48c-11eb-8ec5-7f4a8f8cdb17.png)
+
+This is then extruded to the thickness of the bearing that will mount within it.
+
+### 4.2.4 Moving housing designs
+
+For designs with a moving housing, simply repeat section 4.2.3 on the bottom side of the housing, as this will be used to mount a bearing on both sides of the gearbox.
+
+Model:
+
+![image](https://user-images.githubusercontent.com/79012344/120710516-39da3780-c48c-11eb-980e-a3bc5784c283.png)
+
+How power is derived from this ring is up to the user, however for the example application a hole for REV Robotics 15mm x channel has been modeled.
+
+Example:
+
+![image](https://user-images.githubusercontent.com/79012344/120710537-4068af00-c48c-11eb-8529-8fcfb8d2f983.png)
+
+### 4.2.5 Stationary housing design
+If a stationary housing is to be used, a motor mount needs to be created on the bottom of the housing. 
+
+Example:
+
+![image](https://user-images.githubusercontent.com/79012344/120710602-52e2e880-c48c-11eb-84fc-93a1081587b2.png)
+
+
+To create a motor mount, create a sketch on the bottom face of the housing with an outer diameter matching that of the housing, and holes for the motor screws and a space for the drive shaft to enter the housing.
+
+Model:
