@@ -74,20 +74,20 @@ Up until this point, a simplified model of the actual mechanism by which the gea
 
 > By Petteri Aimonen - Own work, Public Domain, https://commons.wikimedia.org/w/index.php?curid=7732225
 
-The same movement is happening here as before, that wobbling roll is the same as when it was 2 simple circles, but now there’s multiple points of contact being made so the disk can’t just slip around, it can only rotate on its rolling path. The interaction between the pins and lobes is also a similar motion to the circle rolling around another circle, one could think of the disk as the pattern made by rolling one of the pins around a circle. It is alos at this point that the number of pins in the housing compared the number of lobes on the cycloidal disk come into play. Knowing that the lobes on the disk and the drive pins are in roughly the same scale to each other, similar to gear teeth, if there were the same number of pins and lobes then the disk would not be able to move because it would just be sitting locked into the pins.
+The same movement is happening here as before, that wobbling roll is the same as when it was 2 simple circles, but now there’s multiple points of contact being made so the disk can’t just slip around, it can only rotate on its rolling path. The interaction between the pins and lobes is also a similar motion to the circle rolling around another circle, one could think of the disk as the pattern made by rolling one of the pins around a circle. It is also at this point that the number of pins in the housing compared to the number of lobes on the cycloidal disk come into play. Knowing that the lobes on the disk and the drive pins are in roughly the same scale to each other, similar to gear teeth, if there were the same number of pins and lobes then the disk would not be able to move because it would just be sitting locked into the pins.
 
 ![image](https://user-images.githubusercontent.com/79012344/120707296-275dff00-c488-11eb-9c4f-971e62db18af.png)
 
 That’s just going to bind up.
 
-This is why, in this guide and in most cycloidal reducer designs, there is one more pin on the housing than there are lobes on the disk. Not only does this make room for the rolling motion to be possible in the first place, it defines the transmission ratio of the reducer in more solid terms than the difference between the circumference of 2 circles. This is to say that for every full rotation of the input shaft, the disk moves 1 (or whatever the difference between the number of pins and lobes is) pin over. With this knowledge, the gear ratio can be defined. In this example of 30 pins on the disk and 31 pins in the housing, it would take 30 rotations of the input shaft to make one full rotation of the cycloidal disk, making the transmission ration 30:1.
+This is why, in this guide and in most cycloidal reducer designs, there is one more pin on the housing than there are lobes on the disk. Not only does this make room for the rolling motion to be possible in the first place, it defines the transmission ratio of the reducer in more solid terms than the difference between the circumference of 2 circles. This is to say that for every full rotation of the input shaft, the disk moves 1 (or whatever the difference between the number of pins and lobes is) pin over. With this knowledge, the gear ratio can be defined. In this example of 30 pins on the disk and 31 pins in the housing, it would take 30 rotations of the input shaft to make one full rotation of the cycloidal disk, making the transmission ratio 30:1.
 
 ## 3 – Snap back to reality
 An understanding of the theory of operation is only so good as the practical application of those concepts. To that end, this section will translate the concepts from section 2 to what one may actually want to manufacture.
 
 ## 3.1 – Variants of the design
 
-This guide offers 2 main variants of the cycloidal reducer. The first is what is generally considered to the be standard design and is what is described throughout section 2, using a plate connected to the output pins as the power output for the reducer. This design will be called the driven disk design going forwards. The second variant is conceptually the same as the first, but has fixed output pins and instead rotates the housing (called the driven housing design in this guide). 
+This guide offers 2 main variants of the cycloidal reducer. The first is what is generally considered to be the standard design and is what is described throughout section 2, using a plate connected to the output pins as the power output for the reducer. This design will be called the driven disk design going forwards. The second variant is conceptually the same as the first, but has fixed output pins and instead rotates the housing (called the driven housing design in this guide). 
 
 > [Standard cycloidal reducer full assembly (video)](https://youtu.be/JAcRD82Ofww)
 
@@ -126,7 +126,7 @@ Another point to consider is that the cycloidal disk should be a similar thickne
 
 ![Screenshot from 2021-06-04 09-05-26](https://user-images.githubusercontent.com/79012344/120805664-093de080-c514-11eb-99e9-ee21f2e4e896.png)
 
-One final element of note is that, especially with a 3D printed disk, the bearing is likely to be the heaviest spinning component, and will be spinning off center to the rest of the assembly. This can be dealth with by using a stacked design (see 3.1.1), but suffice it to say that a lighter bearing will create less vibration.
+One final element of note is that, especially with a 3D printed disk, the bearing is likely to be the heaviest spinning component, and will be spinning off center to the rest of the assembly. This can be dealt with by using a stacked design (see 3.1.1), but suffice it to say that a lighter bearing will create less vibration.
 
 ### 3.2.2 – The required bearings – output pins / output ring (output bearings)
 To center the output disk/pins to the housing, it is advised that a relatively large bearing is used with an inner diameter that is able to fit around the outside of the output disk, and is therefore larger than the outer edge of the output pins. This then mounts into the housing.
@@ -137,7 +137,7 @@ This method allows the forces applied to the output ring to be braced against th
 
 ### 3.2.3 – Output pins
 
-Using something other than 3D printed plastic for output pins is by far the most valuable upgrade one can make to their budget cycloidal drive, because it increases the strength of the assembly by a massive degree without adding too many more individual components. The drawbacks of 3D printed output pins is quite obvious when one considers the relatively low force required to sheer off the pins on the layer lines. 
+Using something other than 3D printed plastic for output pins is by far the most valuable upgrade one can make to their budget cycloidal drive, because it increases the strength of the assembly by a massive degree without adding too many more individual components. The drawbacks of 3D printed output pins is quite obvious when one considers the relatively low force required to shear off the pins on the layer lines. 
 
 ![Screenshot from 2021-06-04 09-15-10](https://user-images.githubusercontent.com/79012344/120806940-6f773300-c515-11eb-8493-91bb29bfee7f.png)
 
@@ -182,10 +182,10 @@ As mentioned in the introduction, this section will be making use of a cycloidal
 
 ### 4.1.4 – Generating the disk
 
-* Create a new file and and a new Part Design body. This guide will be using the Part Design workbench for all modeling except for the generation of the disk.
+* Create a new file and add a new Part Design body. This guide will be using the Part Design workbench for all modeling except for the generation of the disk.
 * Within the body, use the “Gear” workbench to create a new hypocyloid gear ![image](https://user-images.githubusercontent.com/79012344/120709101-70af4e00-c48a-11eb-845b-1f0beacbdb09.png)
 * Notice that it generated 2 separate disks and a set of pins, however these pins and extra disk will be disabled shortly
-* Selecting the hypocycloid gear that was generated in the combo view will allow for the adjustment of all perimeters, the details of which are listed below:
+* Selecting the hypocycloid gear in the combo view will allow for the adjustment of all perimeters, the details of which are listed below:
 
         ◦ Base
             ▪ Label
@@ -240,17 +240,17 @@ As mentioned in the introduction, this section will be making use of a cycloidal
                     ◦ It cannot be changed
 
 ### 4.1.5 – Output holes
-The disk generated will be offset on the x axis by the amount of eccentricity, which makes automatically spacing the output holes on a reference circle centered to the center of the disk rather than the origin of the model difficult, and can make creating the holes correctly after exporting to another program difficult. Ideally the disk would be moved to be centered in reference to the origin of the model, but I had difficulty making that work in the part design workbench. Those more familiar with FreeCAD may have a better solution to what is about to be shown, but this does work.
+The disk generated will be offset on the x axis by the eccentricity, which makes automatically spacing the output holes on a reference circle centered to the center of the disk rather than the origin of the model difficult, and can make creating the holes correctly after exporting to another program a pain. Ideally the disk would be moved to be centered in reference to the origin of the model, but I had difficulty making that work in the part design workbench. Those more familiar with FreeCAD may have a better solution to what is about to be shown, but this does work.
 
 First, create a sketch mapped to the top face of the disk, and use the link to external geometry tool on the center circle. 
 
 ![image](https://user-images.githubusercontent.com/79012344/120709780-4a3de280-c48b-11eb-9455-85a9573c8cf3.png)
 
-You can see the dependency between the center of the disk and the origin of the model here. Next toggle on construction mode ![image](https://user-images.githubusercontent.com/79012344/120709812-545fe100-c48b-11eb-9b20-0e137fddffd5.png) and use the “create a regular polygon” tool to first select a shape with the same number of points as you require output holes, and then create it centered to the linked external geometry. To fully constrain the sketch be sure to do something to fix the rotation of the regular polygon. In this case, a square is used to create 4 holes.
+You can see the discrepancy between the center of the disk and the origin of the model here. Next toggle on construction mode ![image](https://user-images.githubusercontent.com/79012344/120709812-545fe100-c48b-11eb-9b20-0e137fddffd5.png) and use the “create a regular polygon” tool to first select a shape with the same number of points as you require output holes, and then create it centered to the newly linked external geometry. To fully constrain the sketch be sure to do something to fix the rotation of the regular polygon. In this case, a square is used to create 4 holes.
 
 ![image](https://user-images.githubusercontent.com/79012344/120709872-6a6da180-c48b-11eb-9a79-79a36d67a1f2.png)
 
-Toggle out of construction mode and place a circle on each point, set them equal to each other, and then set their diameter. In this case, 7mm diameter nylon pins are used for the output pins and the disk has a 0.8mm eccentricity. However, the printer and filament used for testing has a habit of shrinking the final model slightly, so 0.1mm was added to the theoretical diameter (7.8) of the output holes.
+Toggle out of construction mode and place a circle on each point, set them equal to each other, and then set their diameter. In this case, 7mm diameter nylon pins are to be used for the output pins and the disk has a 0.8mm eccentricity. However, the printer and filament used for testing has a habit of shrinking the final model slightly, so 0.1mm was added to the theoretical diameter (7.8) of the output holes.
 
 Set the diameter of the reference circle. For more information on determining the best pin and reference circle dimensions, see 3.3.
 
@@ -276,7 +276,7 @@ To accomplish this, first take the pin circle diameter (remember to convert from
 
 ![image](https://user-images.githubusercontent.com/79012344/120710136-c6d0c100-c48b-11eb-8037-563e30016fae.png)
 
-Because the eccentricity of the disk is just effectively how far it extends towards the pins and how deep the troughs are, adding 4 times the eccentricity to this value will give the maximum diameter of the area the disk will travel in, and thus the minimum size for the inner diameter of this part of the housing. In this case, 53.3 + 4(0.8) = 56.5. Multiplying the eccentricity by 4 may seem counter intuitive at first, but remember that it refers to the height of the peaks and depths of the troughs in terms of a center line in the middle of them, hence multiplying it by 2, and it is also in terms of the radius, so when working with diameters one has to multiply it by 2 again.
+Because the eccentricity of the disk is just effectively how far it extends towards the pins and how deep the troughs are, adding 4 times the eccentricity to this value will give the maximum diameter of the area the disk will travel in, and thus the minimum size for the inner diameter of this part of the housing. In this case, 53.3 + 4(0.8) = 56.5. Multiplying the eccentricity by 4 may seem counterintuitive at first, but remember that it refers to the height of the peaks and depths of the troughs in terms of a center line in the middle of them, hence multiplying it by 2, and it is also in terms of the radius, so when working with diameters one has to multiply it by 2 again.
 
 This plus preferably an extra 0.5mm at least (preferably more, but when working at this scale there simply isn’t much space to be spared) for extra clearance to accommodate for the disk being slightly too large or the housing flexing gives the inner diameter for the pin section of the housing.
 
