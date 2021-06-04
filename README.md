@@ -73,6 +73,7 @@ Up until this point, a simplified model of the actual mechanism by which the gea
 <img src="https://user-images.githubusercontent.com/79012344/120367491-ec6c9780-c2de-11eb-9e0b-7f542085e93b.gif" width="500">
 > By Petteri Aimonen - Own work, Public Domain, https://commons.wikimedia.org/w/index.php?curid=7732225
 
+
 The same movement is happening here as before, that wobbling roll is the same as when it was 2 simple circles, but now there’s multiple points of contact being made so the disk can’t just slip around, it can only rotate on it’s rolling path. The interaction between the pins and lobes is also a similar motion to the circle rolling around another circle, one could also think of the disk as the pattern made by rolling one of the pins around a circle. It is at this point that the number of pins in the housing compared the number of lobes on the cycloidal disk come into play. Knowing that the lobes on the disk and the drive pins are in roughly the same scale to each other, similar to gear teeth, if there were the same number of pins and lobes then the disk would not be able to move because it would just be sitting locked into the pins.
 
 ![image](https://user-images.githubusercontent.com/79012344/120707296-275dff00-c488-11eb-9c4f-971e62db18af.png)
