@@ -362,7 +362,74 @@ Model:
 
 ![image](https://user-images.githubusercontent.com/79012344/120710693-7443d480-c48c-11eb-8333-1fdd41e25dea.png)
 
-# Sections about the output disk and eccentric shaft still being finalized
+## 4.3 – Output ring & pins
+Output disks and pins are perhaps the simplest component to model but bear the majority of the forces imparted onto the cycloidal drive.
+
+### 4.3.1 – Driven disk – 3d printed pins
+This is the simplest version of the output disk, and integrates the output pins and output disk into one printed component. It is not advised for high load bearing applications (see 3.2.3).
+
+First, the output disk is created, which is simply a cylinder intended to fill the interior dimensions of the output bearing. In this case a 45.25 mm disk extruded to 7mm thick.
+
+![image](https://user-images.githubusercontent.com/79012344/120811211-bbc47200-c519-11eb-8bdd-4ed57fd648bd.png)
+
+![image](https://user-images.githubusercontent.com/79012344/120811225-bff08f80-c519-11eb-9fc3-bb52c449f799.png)
+
+Next, on one face of the disk, model a pin whose center is on the reference circle found in section 2.3.
+
+![image](https://user-images.githubusercontent.com/79012344/120811260-c848ca80-c519-11eb-9553-211f0a10d6bf.png)
+
+Next extrude that to the thickness of the cycloidal disk, and use a polar pattern to duplicate it evenly around the disk for however many pins are required.
+
+![image](https://user-images.githubusercontent.com/79012344/120811284-ced74200-c519-11eb-8151-a5bb971388c9.png)
+
+Mount whatever load is to be driven to the other side of this plate. Also, be sure to account for the motor drive shaft extending too far into the housing and fouling on the output disk. You may need to place a hole in its center to account for this.
+
+### 4.3.2 – Driven disk with nylon pins / top plate of driven housing variants
+This is effectively the same as the 3D printed pin version, except instead of pins being mirrored with the polar pattern, holes for screws/bolts, in this case 3mm screws, are used. This plate can either be used as the driven output plate or as the top plate of driven housing designs.
+
+![image](https://user-images.githubusercontent.com/79012344/120811332-dc8cc780-c519-11eb-8c2b-8958727d3669.png)
+
+For driven output disk designs, if a flush face on the outside face of the is desired, add hexagonal holes to capture nuts on the other side of the disk. 
+
+![image](https://user-images.githubusercontent.com/79012344/120811354-e8788980-c519-11eb-8fed-614c278ef4e9.png)
+
+This is not required for using this model in driven  housing designs as the screw heads will be on this plate, not the nuts. However countersinking can be done for anesthetics or to use a shorter screw.
+
+For driven disk designs, it’s then just a matter of screwing on nylon spacers.
+
+### 4.3.3 – Moving housing motor plate
+Ideally, the motor plate of a moving housing cycloidal drive would be identical to the top plate, save for space to capture nuts for the screws running through the pins, having holes to mount the motor, and a hole for the motor drive shaft, but because in this case the motor mounting holes could not fit within the inner diameter of the output bearing, a slightly larger adapter plate was created.
+
+Example:
+
+![image](https://user-images.githubusercontent.com/79012344/120811461-fd551d00-c519-11eb-8bff-2a0810af9050.png)
+
+The same starting plate is taken to fill the inner diameter of the output bearing, but now a larger (55mm diameter and 5mm thick to allow the screw heads to have 2mm countersinking) plate is added to its bottom face to accommodate the motor mounting screw locations.
+
+![image](https://user-images.githubusercontent.com/79012344/120811490-03e39480-c51a-11eb-926c-85989983351e.png)
+
+Motor mounting holes are then cut from the bottom face through the model.
+
+![image](https://user-images.githubusercontent.com/79012344/120811512-0b0aa280-c51a-11eb-915a-11aa577b9890.png)
+
+These then have 7mm diameter holes cut from the top to give clearance for the screw heads.
+
+![image](https://user-images.githubusercontent.com/79012344/120811586-22499000-c51a-11eb-910a-131ced7b64d6.png)
+
+In this case, the pockets are 9mm, 7mm to clear the bearing mount section and another 2mm for countersinking of the screws.
+
+Next, the same holes for mounting output pins are added, with corresponding hexagonal pockets on the other side to capture a nut.
+
+![image](https://user-images.githubusercontent.com/79012344/120811605-283f7100-c51a-11eb-8de7-97336688384f.png)
+
+Finally, a centered hole, in this case 15mm in diameter is added to accommodate for the eccentric shaft passing into the housing.
+
+![image](https://user-images.githubusercontent.com/79012344/120811629-2e355200-c51a-11eb-908b-fe6a832149cf.png)
+
+## 4.4 – the eccentric shaft
+The design of the eccentric shaft is heavily dependent on the motor drive shaft that it interacts with, however the base concept of the shaft being offset from the input shaft is constant. In this case, a D shaft coming from a nema 17 motor is the input shaft, and a very simple eccentric shaft was created to cover the entire 18mm section of the motor output shaft with a flat side machined onto it. 
+
+First, a hole tested to snugly accept the D shaft was modeled.
 
 # 6 – Closing
 
