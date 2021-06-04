@@ -89,21 +89,17 @@ An understanding of the theory of operation is only so good as the practical app
 
 This guide offers 2 main variants of the cycloidal reducer. The first is what is generally considered to the be standard design and is what is described throughout section 2, using a plate connected to the output pins as the power output for the reducer. This design will be called the driven disk design. The second variant is conceptually the same as the first, but has fixed output pins and instead rotates the housing. 
 
-> [Standard cycloidal reducer full assembly](https://youtu.be/JAcRD82Ofww)
+> [Standard cycloidal reducer full assembly (video)](https://youtu.be/JAcRD82Ofww)
 
 ### 3.1.2 – Driven housing
 
-The best way to conceptualize driven housing designs is to imagine the housing as being free floating and the cycloidal disk as limited in its range of motion to it’s wobble. This is accomplished by mounting the output pins to a stationary plate, in this case the one the motor mounts to. This component is referred to as the motor plate.
+The best way to conceptualize driven housing designs is to imagine the housing as being free floating and the cycloidal disk as limited in its range of motion to it’s wobble. This is accomplished by mounting the output pins to a stationary plate, in this case the one the motor mounts to. This component is referred to as the motor plate. Now, when the housing interacts with the disk, the disk can’t rotate but the housing can, so it does.
 
-> place holder for video, please hold
-
-Now, when the housing interacts with the disk, the disk can’t rotate but the housing can, so it does.
-
-> place holder for video, please hold
+> [Drivin Housing cycloidal reducer full assembly (video)](https://youtu.be/nldJB2Xw-ws)
 
 Of course, the housing needs to be kept centered, won’t survive much torsion if only supported on one side, and the forces applied to it shouldn’t be transferred to the cycloidal disk, so it’s stabilized by a bearing on the top and bottom. The bottom bearing connects to the motor plate, and the top bearing connects to a plate that has screws running down through the drive pins to connect to the motor plate.
 
-> photo
+> [Moving housing cycloidal drive in operation (video)](https://youtu.be/8ANe9f_OlMg)
 
 ### 3.1.3 – A note on stacked disks
 
