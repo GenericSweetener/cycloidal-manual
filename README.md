@@ -148,26 +148,28 @@ The 2 routes one can take in making reinforced output pins are using small beari
 This guide uses 7mm outer diameter 3mm inner diameter nylon spacers as output pins.
 
 ### 3.2.4 - Drive pins
-Using bearings in place of 3D printed drive pins can significantly reduce wear and friction within a cycloidal drive, however these benefits come with increased weight, drive pin diameter, cost, and complexity. To that end this guide did not include testing with bearings in place of drive pins and  does not have modeling instructions for them. 
+Using bearings in place of 3D printed drive pins can significantly reduce wear and friction within a cycloidal drive, however these benefits come with increased weight, drive pin diameter, cost, and complexity. To that end this guide did not include testing with bearings in place of drive pins and does not have modeling instructions for them. 
 
 ### 3.2.5 – A note on pressure fitting bearings
-This guide requires a fair number of bearings to be pressure fit into 3D printed housings, so some thought and testing of bearing fitment should be done before printing components. It is therefore advised that you create test pieces for bearings to fit into / to fit into bearings and undergo some trial and error to find dimensions that can tightly hold or fit into a bearing without being deformed by it or requiring forceful persuasion (Take it from someone who’s broken a bearing with a hammer). When making test pieces, be sure to use the same print settings as on the final components. Time spent in this process will save on test prints down the line.
+This guide requires a fair number of bearings to be pressure fit into 3D printed housings, so some thought and testing of bearing fitment should be done before printing components. It is therefore advised that you create test pieces for bearings to fit into / to fit into bearings and undergo some trial and error to find dimensions that can tightly hold or fit into a bearing without being deformed by it or requiring forceful persuasion (Take it from someone who’s broken a bearing with a hammer). When making test pieces, be sure to use the same print settings as on the final components. Time spent in this process will save on test prints later down the line.
 
 ## 3.3 – Choosing the best output pin circle
-The output pin circle is the reference circle that passes through the center of the output holes on the cycloidal disk and through the center of the drive pins as mentioned in section 2.5. Especially on the smaller cycloidal disks used in this guide, it is of the upmost importance to ensure that the output holes on the cycloidal disk have enough material surrounding them as to not create weak thin spots in the disk for deformation or cracking to occur. A good rule of thumb is to have the output pin circle roughly centered on the disk.
+The output pin circle is the reference circle that passes through the center of the output holes on the cycloidal disk and through the center of the drive pins as mentioned in section 2.5. Especially on the smaller cycloidal disks used in this guide, it is of the upmost importance to ensure that the output holes on the cycloidal disk have enough material surrounding them as to not create thin weak spots in the disk for deformation or cracking to occur. A good rule of thumb is to have the output pin circle roughly centered on the disk, and try to have ~3mm of material around the holes.
 
 ![Screenshot from 2021-06-04 09-17-33](https://user-images.githubusercontent.com/79012344/120807237-bb29dc80-c515-11eb-8b3c-a01079115bd4.png)
 
 However, this is not always possible because the inner diameter of the drive bearing can limit the maximum size of the output pin circle, and should also be taken into account. This is why the output holes on the reference models provided are not perfectly centered on the cycloidal disk.
 
+![image](https://user-images.githubusercontent.com/79012344/120806667-21fac600-c515-11eb-84f3-34a339cc81d5.png)
+
 # 4 – Design & CAD
-Now for the boring part. This section is a step-by-step guide for designing the various components of driven housing and driven disk cycloidal reducers. The reference models created for this project are provided here in .FCStd format, editable and exportable in FreeCAD.
+Now for the long boring part. This section is a step-by-step guide for designing the various components of driven housing and driven disk cycloidal reducers. The reference models created for this project are provided here in .FCStd format, editable and exportable in FreeCAD.
 
 ## 4.1 – Cycloidal disk
-This guide uses the process of modeling the cycloidal disk as the focal point for setting all major parameters of the cycloidal drive. To that end, the specific parameters to be considered and their effects on the final product will be discussed in this section.
+This guide uses the process of modeling the cycloidal disk as the focal point for setting all major parameters of the cycloidal drive.
 
 ### 4.1.1 – Why FreeCAD?
-The two most common ways to model a cycloidal disk are mathematically defining it from scratch as a curve, or using a disk generation tool that creates a disk based on easily inputted parameters. This guide is aimed at beginners to cycloidal gearing, and so it was decided that a disk generation tool should be used to lower the overall difficulty for the end user. Because FreeCAD was used for all the modeling in this project, the FCGear workbench (link to wiki) was used to generate the disk. However, because this guide is intended to be usable agnostic of the chosen modeling software, this section has been split into a video which walks a user through the complete process, from installing FreeCAD to exporting the disk for printing; and a written section intended for those already familiar with FreeCAD.
+The two common ways to model a cycloidal disk are mathematically defining it from scratch as a curve, or using a disk generation tool that creates a disk based on easily inputted parameters. This guide is aimed at beginners to cycloidal gearing, and so it was decided that a disk generation tool should be used to lower the overall difficulty for the end user. Because FreeCAD was used for all modeling in this project, the [FCGear workbench](https://wiki.freecadweb.org/FCGear_Workbench) was used to generate the disk. However, because this guide is intended to be usable agnostic of the chosen modeling software, this section has been split into a video which walks a user through the complete process, from installing FreeCAD to exporting the disk for printing; and a written section intended for those already familiar with FreeCAD.
 
 If, however, you would prefer to mathematically define the disk in the program of your choice, this paper has been provided to aid in that process. [Link here](https://blogs.solidworks.com/teacher/wp-content/uploads/sites/3/Building-a-Cycloidal-Drive-with-SOLIDWORKS.pdf)
 
