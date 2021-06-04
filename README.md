@@ -74,30 +74,30 @@ Up until this point, a simplified model of the actual mechanism by which the gea
 
 > By Petteri Aimonen - Own work, Public Domain, https://commons.wikimedia.org/w/index.php?curid=7732225
 
-The same movement is happening here as before, that wobbling roll is the same as when it was 2 simple circles, but now there’s multiple points of contact being made so the disk can’t just slip around, it can only rotate on it’s rolling path. The interaction between the pins and lobes is also a similar motion to the circle rolling around another circle, one could also think of the disk as the pattern made by rolling one of the pins around a circle. It is at this point that the number of pins in the housing compared the number of lobes on the cycloidal disk come into play. Knowing that the lobes on the disk and the drive pins are in roughly the same scale to each other, similar to gear teeth, if there were the same number of pins and lobes then the disk would not be able to move because it would just be sitting locked into the pins.
+The same movement is happening here as before, that wobbling roll is the same as when it was 2 simple circles, but now there’s multiple points of contact being made so the disk can’t just slip around, it can only rotate on its rolling path. The interaction between the pins and lobes is also a similar motion to the circle rolling around another circle, one could think of the disk as the pattern made by rolling one of the pins around a circle. It is alos at this point that the number of pins in the housing compared the number of lobes on the cycloidal disk come into play. Knowing that the lobes on the disk and the drive pins are in roughly the same scale to each other, similar to gear teeth, if there were the same number of pins and lobes then the disk would not be able to move because it would just be sitting locked into the pins.
 
 ![image](https://user-images.githubusercontent.com/79012344/120707296-275dff00-c488-11eb-9c4f-971e62db18af.png)
 
 That’s just going to bind up.
 
-This is why, in this guide and in most cycloidal reducer designs, there is one more pin on the housing than there are lobes on the disk. Not only does this make room for the rolling motion possible in the first place, it defines the transmission ratio of the reducer in more solid terms than the difference between the circumference of 2 circles. This is to say that for every full rotation of the input shaft, the disk moves 1 (or whatever the difference between the number of pins and lobes is) pin over. With this knowledge, the gear ratio can be defined. In this example of 30 pins on the disk and 31 pins in the housing, it would take 30 rotations of the input shaft to make one full rotation of the cycloidal disk, making the transmission ration 30:1.
+This is why, in this guide and in most cycloidal reducer designs, there is one more pin on the housing than there are lobes on the disk. Not only does this make room for the rolling motion to be possible in the first place, it defines the transmission ratio of the reducer in more solid terms than the difference between the circumference of 2 circles. This is to say that for every full rotation of the input shaft, the disk moves 1 (or whatever the difference between the number of pins and lobes is) pin over. With this knowledge, the gear ratio can be defined. In this example of 30 pins on the disk and 31 pins in the housing, it would take 30 rotations of the input shaft to make one full rotation of the cycloidal disk, making the transmission ration 30:1.
 
 ## 3 – Snap back to reality
 An understanding of the theory of operation is only so good as the practical application of those concepts. To that end, this section will translate the concepts from section 2 to what one may actually want to manufacture.
 
 ## 3.1 – Variants of the design
 
-This guide offers 2 main variants of the cycloidal reducer. The first is what is generally considered to the be standard design and is what is described throughout section 2, using a plate connected to the output pins as the power output for the reducer. This design will be called the driven disk design. The second variant is conceptually the same as the first, but has fixed output pins and instead rotates the housing. 
+This guide offers 2 main variants of the cycloidal reducer. The first is what is generally considered to the be standard design and is what is described throughout section 2, using a plate connected to the output pins as the power output for the reducer. This design will be called the driven disk design going forwards. The second variant is conceptually the same as the first, but has fixed output pins and instead rotates the housing (called the driven housing design in this guide). 
 
 > [Standard cycloidal reducer full assembly (video)](https://youtu.be/JAcRD82Ofww)
 
 ### 3.1.2 – Driven housing
 
-The best way to conceptualize driven housing designs is to imagine the housing as being free floating and the cycloidal disk as limited in its range of motion to it’s wobble. This is accomplished by mounting the output pins to a stationary plate, in this case the one the motor mounts to. This component is referred to as the motor plate. Now, when the housing interacts with the disk, the disk can’t rotate but the housing can, so it does.
+The best way to conceptualize driven housing designs is to imagine the housing as being free floating and the cycloidal disk as limited in its range of motion to just its wobble. This is accomplished by mounting the output pins to a stationary plate, in this case the one the motor mounts to. This component is referred to here as the motor plate or lower pin plate. Now, when the housing interacts with the disk, the disk can’t rotate but the housing can, so it does.
 
 > [Moving housing cycloidal drive in operation (video)](https://youtu.be/8ANe9f_OlMg)
 
-Of course, the housing needs to be kept centered, won’t survive much torsion if only supported on one side, and the forces applied to it shouldn’t be transferred to the cycloidal disk, so it’s stabilized by a bearing on the top and bottom. The bottom bearing connects to the motor plate, and the top bearing connects to a plate that has screws running down through the drive pins to connect to the motor plate.
+Of course, the housing needs to be kept centered, won’t survive much torsion if only supported on one side, and the forces applied to it shouldn’t be transferred to the cycloidal disk. For those reasons it’s stabilized by a bearing on the top and bottom. The bottom bearing connects to the motor plate, and the top bearing connects to a plate that has screws running down through the drive pins to connect to the motor plate.
 
 > [Drivin Housing cycloidal reducer full assembly (video)](https://youtu.be/nldJB2Xw-ws)
 
@@ -115,21 +115,21 @@ These disks will rotate in the same direction and at the same speed so their out
 Anyone genuinely considering manufacturing a cycloidal drive by means of 3D printing will have likely noticed the very high number of surfaces that need to be in contact with each other in even the most basic of cycloidal designs. The good news is that all but the edge face of the cycloidal disk can be replaced by a friction reducing element, however this may not always be the best design decision. At any rate, a cycloidal drive that will carry any sort of load requires at the very least 2 bearings: 1 in the center of the cycloidal disk and another to keep the output ring centered. 
 
 ### 3.2.1 – The required bearings – cycloidal disk
-The bearing in the center of the cycloidal disk both relies on and can limit some of the primary dimensions of the cycloidal drive, so care should be taken when finding a bearing to use. Firstly, keep in mind that this bearing is what makes it possible to use an eccentric shaft, so some thought needs to be given to the inner dimension of the bearing so that the the desired level of eccentricity is both possible and won’t create a situation where the hole in the eccentric shaft that accepts the input shaft of the motor is extremely thin on one side. 
+The bearing in the center of the cycloidal disk (drive bearing) both relies on and can limit some of the primary dimensions of the cycloidal drive, so care should be taken when finding a bearing to use. Firstly, keep in mind that this bearing is what makes it possible to use an eccentric shaft, so some thought needs to be given to the inner dimension of the bearing so that the the desired level of eccentricity is both possible and won’t create a situation where the hole in the eccentric shaft that accepts the input shaft of the motor is extremely thin on one side. (learned that the hard way).
 
 ![Screenshot from 2021-06-04 09-03-49](https://user-images.githubusercontent.com/79012344/120805439-ce3bad00-c513-11eb-9826-c05b82470724.png)
 
 
-A good rule of thumb is that (assuming the eccentric shaft is accepting a metal output shaft from the motor) the inner diameter of the bearing should be equal to the diameter of the motor output shaft plus the disk’s eccentricity plus however thick you want the thinnest part of the eccentric shaft to be (at least 3mm).
+A good rule of thumb is that (assuming the eccentric shaft is accepting a metal output D-shaft from the motor) the inner diameter of the bearing should be equal to the diameter of the motor output shaft plus the disk’s eccentricity plus however thick you want the thinnest part of the eccentric shaft to be (at least 3mm).
 
-Another point to consider is that the cycloidal disk should be a similar thickness to the bearing. This ensures that the bearing will be able to transfer power to the entire edge of the cycloidal disk. It’s also a good idea to have a ridge of some sort modeled in the hole for the bearing so it can be pressure fit until bottoming out.
+Another point to consider is that the cycloidal disk should be a similar thickness to the drive bearing. This ensures that the bearing will be able to transfer power to the entire edge of the cycloidal disk. It’s also a good idea to have a ridge of some sort modeled in the hole for the bearing so it can be pressure fit until bottoming out.
 
 ![Screenshot from 2021-06-04 09-05-26](https://user-images.githubusercontent.com/79012344/120805664-093de080-c514-11eb-99e9-ee21f2e4e896.png)
 
 One final element of note is that, especially with a 3D printed disk, the bearing is likely to be the heaviest spinning component, and will be spinning off center to the rest of the assembly. This can be dealth with by using a stacked design (see 3.1.1), but suffice it to say that a lighter bearing will create less vibration.
 
-### 3.2.2 – The required bearings – output pins / output ring
-To center the output disk/pins to the housing, it is advised that a relatively large bearing with an inner diameter that is able to fit around the outside of the output disk, and is therefore larger than the outer edge of the output pins. This then mounts into the housing.
+### 3.2.2 – The required bearings – output pins / output ring (output bearings)
+To center the output disk/pins to the housing, it is advised that a relatively large bearing is used with an inner diameter that is able to fit around the outside of the output disk, and is therefore larger than the outer edge of the output pins. This then mounts into the housing.
 
 ![image](https://user-images.githubusercontent.com/79012344/120806667-21fac600-c515-11eb-84f3-34a339cc81d5.png)
 
@@ -137,9 +137,11 @@ This method allows the forces applied to the output ring to be braced against th
 
 ### 3.2.3 – Output pins
 
-Using something other than 3D printed plastic for output pins is by far the most valuable upgrade one can make to their budget cycloidal drive, because it increases the strength of the assembly by a massive degree without adding too many more individual components. The drawbacks of 3D printing output pins is quite obvious when one considers the relatively low force required to sheer off the pins on the layer lines. 
+Using something other than 3D printed plastic for output pins is by far the most valuable upgrade one can make to their budget cycloidal drive, because it increases the strength of the assembly by a massive degree without adding too many more individual components. The drawbacks of 3D printed output pins is quite obvious when one considers the relatively low force required to sheer off the pins on the layer lines. 
 
 ![Screenshot from 2021-06-04 09-15-10](https://user-images.githubusercontent.com/79012344/120806940-6f773300-c515-11eb-8493-91bb29bfee7f.png)
+
+> Video of pin failure [here.](https://youtu.be/O2v3M0Q1Ow4)
 
 The 2 routes one can take in making reinforced output pins are using small bearings or using round nylon standoff spacers in place of 3D printed output pins. The only real difference from a modeling and construction perspective is that rather than modeling pins to be printed on the output disk, one would have holes through it, potentially with hexagonal holes on the other side going partially through it to capture a nut. And of course a bolt/screw and a nut is necessary to keep the bearing / nylon spacer in place (as seen in 3.2.2).
 
