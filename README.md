@@ -431,6 +431,19 @@ The design of the eccentric shaft is heavily dependent on the motor drive shaft 
 
 First, a hole tested to snugly accept the D shaft was modeled.
 
+![image](https://user-images.githubusercontent.com/79012344/120811686-3ee5c800-c51a-11eb-8857-5ffca1bcf243.png)
+
+Then a circle that has been test fit with the inner diameter of the drive bearing (in this case 7.89mm) is placed offset by the  eccentricity from the input shaft.
+
+![image](https://user-images.githubusercontent.com/79012344/120811710-44dba900-c51a-11eb-8a65-8db1038313a3.png)
+
+Note that the flat side of the D shaft, where most power will be transferred, is placed in the thicker area of the shaft. This is a poorly chosen bearing inner diameter because of the extremely thin section it creates. See 3.2.1 for best drive bearing practices.
+
+This is then extruded by 18mm.
+
+![image](https://user-images.githubusercontent.com/79012344/120811724-4b6a2080-c51a-11eb-855f-4b174eadde1e.png)
+
+
 # 6 – Closing
 
 ## 6.1 – Sources
