@@ -428,6 +428,10 @@ This is then extruded by 18mm.
 
 # 6 – Closing
 
+The exact intent for this project has been a moving target from it’s conception to completion, and this is well reflected in the initial research question. This project was originally intended to be a research paper comparing different gearbox designs, however time constraints and what was viewed at the time as an apparent need for something like what this final product has become, have shaped it into something different entirely. This guide takes the primary focus of the research question, namely understanding at least one complex gear set that can be manufactured via 3D printing, and expands on it in a way that is more targeted to what may actually be useful to its intended audience.
+
+Hopefully this guide was at least of some use someone, slapdash as it may be in places.
+
 ## 6.1 – Sources
 
 Thube, Sandeep, and Bobak, Todd. *Dynamic Analysis of a Cycloidal Gearbox Using Finite Element Method*, American Gear Manufacturers Association, 2012, http://edge.rit.edu/content/P15201/public/MSD%20II/Research%20Papers%20Humanoids/Unknown%20-%20AGMA%20Technical%20Paper%20Dynamic%20Analysis%20of%20a%20Cycloidal%20Gearbox%20Using%20Finite%20Element%20Method%20-%20Thube,%20Bobak.pdf
