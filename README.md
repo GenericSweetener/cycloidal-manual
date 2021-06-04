@@ -141,9 +141,7 @@ Using something other than 3D printed plastic for output pins is by far the most
 
 ![Screenshot from 2021-06-04 09-15-10](https://user-images.githubusercontent.com/79012344/120806940-6f773300-c515-11eb-8493-91bb29bfee7f.png)
 
-The 2 routes one can take in making reinforced output pins are using small bearings or using round nylon standoff spacers in place of 3D printed output pins. The only real difference from a modeling and construction perspective is that rather than modeling pins to be printed on the output disk, one would have holes through it, potentially with hexagonal holes on the other side going partially through it to capture a nut. And of course a bolt/screw and a nut is necessary to keep the bearing / nylon spacer in place.
-
-> (image)
+The 2 routes one can take in making reinforced output pins are using small bearings or using round nylon standoff spacers in place of 3D printed output pins. The only real difference from a modeling and construction perspective is that rather than modeling pins to be printed on the output disk, one would have holes through it, potentially with hexagonal holes on the other side going partially through it to capture a nut. And of course a bolt/screw and a nut is necessary to keep the bearing / nylon spacer in place (as seen in 3.2.2).
 
 This guide uses 7mm outer diameter 3mm inner diameter nylon spacers as output pins.
 
