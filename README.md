@@ -50,20 +50,20 @@ This is where the bearing and eccentric shaft (green component of the main 3D an
 
 
 ![with shaft](https://user-images.githubusercontent.com/79012344/120705736-32179480-c486-11eb-9539-e033b872181f.gif)
-> Yeah, still not sure what the yellow in the gif is.
+> Yeah, still not sure what the yellow in the gif is. This shows 1 rotation of the input shaft / motor. Note how much the disk actually rotates.
 
 This both means that the power source/motor is isolated in terms of rotational speed from the cycloidal disk, because the inner and outer race of the bearing can spin at different speeds, and, because the motor is off center by the same amount as the difference between the diameters of the cycloidal disk and housing, the disk is always pressed against the edge of housing. The degree to which the motor is off center is called eccentricity, and will play more of a role later. Put this all together, and when running the motor the cycloidal disk will not spin with the motor, but instead will roll along the inside of the housing, and because the circumference of the disk and housing are similar, the disk can be rolled around for one rotation of the motor but only actually spins a small amount. This is in effect a gear reduction because 1 revolution of the motor on the eccentric shaft results in less than one rotation of the cycloidal disk.
 
 However, even if this were taking place in an ideal world where no power was lost to friction, and the cycloidal disk never slipped, there is still no mechanism by which to actually utilize the power being transferred, because the cycloidal disk is not centered and can’t have an output shaft mounted directly to it.
 
 ## 2.5 – Getting an output (output pins and holes)
-Getting power out of a cycloidal drive is less about directly connecting the cycloidal disk to an output shaft and more to do with rectifying the wobbling motion of the disk as it rotates so that the gear reduction created can actually be used. This is where the output holes and pins seen in the animation (purple) come into play. The rectifying method of choice here uses at least 2 (normally more) holes in the cycloidal disk spaced equally in a circular pattern on its face, shown below on a reference circle of a known size. 
+Getting power out of a cycloidal drive is less about directly connecting the cycloidal disk to an output shaft and more to do with rectifying the wobbling motion of the disk as it rotates so that the gear reduction created can actually be used. This is where the output holes and pins seen in the animation (purple) come into play. The rectifying method of choice here uses at least 3 (normally more) holes in the cycloidal disk spaced equally in a circular pattern on its face, shown below on a reference circle of a known size. 
 
 ![Screenshot from 2021-06-03 16-17-28](https://user-images.githubusercontent.com/79012344/120706625-53c54b80-c487-11eb-936c-33393a05f40b.png)
 
 These holes then correspond to output pins/rollers that are arranged in the same fashion and on a reference circle of the same diameter as the reference circle of the holes.
 
-file:///home/mike/Pictures/Screenshot%20from%202021-06-03%2016-20-17.png![image](https://user-images.githubusercontent.com/79012344/120706877-a141b880-c487-11eb-906b-b87bfa480181.png)
+![image](https://user-images.githubusercontent.com/79012344/120706877-a141b880-c487-11eb-906b-b87bfa480181.png)
 
 hese pins are mounted to a surface that can rotate, called the output disk (seen in purple in the animation), which is centered by a bearing of some sort in reference to the housing. What makes it possible for these output pins to mesh with the holes of the disk even though the disk is not centered while rotating is that the disk’s holes are the same as the diameter as the output pins plus the eccentricity of the disk. This in effect means that while the output pins are never centered in the output holes, their sides are able to contact the edges of the holes, rolling along the inside of the output holes and being pushed in the correct direction. This is why there need to be more than one set of pins and holes to prevent slop in the output from the pins not being directly attached to the disk, instead requiring multiple angles of contact.
 
