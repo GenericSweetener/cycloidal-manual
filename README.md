@@ -1,5 +1,7 @@
 This guide was created for a senior capstone project at Templeton Academy based on this research question: What are the appropriate use cases for, benefits and drawbacks of, and best construction practices for common complex gear sets in terms of 3d printed hobbyist construction for high torque applications?
 
+It does not answer that question (see section 6).
+
 # Sections
 ## 1 – Intro
 ## 2 – The concepts and components
