@@ -427,3 +427,13 @@ This is then extruded by 18mm.
 # 6 – Closing
 
 ## 6.1 – Sources
+
+Thube, Sandeep, and Bobak, Todd. *Dynamic Analysis of a Cycloidal Gearbox Using Finite Element Method*, American Gear Manufacturers Association, 2012, http://edge.rit.edu/content/P15201/public/MSD%20II/Research%20Papers%20Humanoids/Unknown%20-%20AGMA%20Technical%20Paper%20Dynamic%20Analysis%20of%20a%20Cycloidal%20Gearbox%20Using%20Finite%20Element%20Method%20-%20Thube,%20Bobak.pdf
+
+Younis, Omar. *Building a Cycloidal Drive with SOLIDWORKS*, The SOLIDWORKS Blog, https://blogs.solidworks.com/teacher/wp-content/uploads/sites/3/Building-a-Cycloidal-Drive-with-SOLIDWORKS.pdf
+
+Bruton, James. *Experiments with Cycloidal Drives*. YouTube, 2021, https://www.youtube.com/watch?v=pWMB5VbLb6w&t
+
+Bruton, James. *3D printed Cycloidal Drive V2*. YouTube, 2021, https://www.youtube.com/watch?v=pWMB5VbLb6w&t
+
+Muthe, Abhijit. et al. *Design and Fabrication of Cycloidal Gearbox*. International Research Journal of Engineering and Technology, 2018, https://www.irjet.net/archives/V5/i4/IRJET-V5I4565.pdf
