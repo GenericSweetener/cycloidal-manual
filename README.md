@@ -443,3 +443,5 @@ Bruton, James. *Experiments with Cycloidal Drives*. YouTube, 2021, https://www.y
 Bruton, James. *3D printed Cycloidal Drive V2*. YouTube, 2021, https://www.youtube.com/watch?v=pWMB5VbLb6w&t
 
 Muthe, Abhijit. et al. *Design and Fabrication of Cycloidal Gearbox*. International Research Journal of Engineering and Technology, 2018, https://www.irjet.net/archives/V5/i4/IRJET-V5I4565.pdf
+
+![TL](https://user-images.githubusercontent.com/79012344/120854056-97cd5480-c54a-11eb-8f6f-5dc9a8482d97.png)
