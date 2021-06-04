@@ -1,7 +1,7 @@
 # Sections
 ## 1 – [Intro](https://github.com/GenericSweetener/cycloidal-manual/blob/main/README.md#11--introduction)
 ## 2 – [The Concepts and Components](https://github.com/GenericSweetener/cycloidal-manual/blob/main/README.md#21--the-concepts-and-components)
-## 3 – [Snap Back to Reality]()
+## 3 – [Snap Back to Reality](https://github.com/GenericSweetener/cycloidal-manual/blob/main/README.md#3--snap-back-to-reality-1)
 ## 4 – 3D Modeling
 ## 5 – Closing and sources
 
@@ -89,13 +89,13 @@ This is why, in this guide and in most cycloidal reducer designs, there is one m
 ## 3 – Snap Back to Reality
 An understanding of the theory of operation is only so good as the practical application of those concepts. To that end, this section will translate the concepts from section 2 to what one may actually want to manufacture.
 
-## 3.1 – Variants of the design
+## 3.1 – Variants of the Design
 
 This guide offers 2 main variants of the cycloidal reducer. The first is what is generally considered to be the standard design and is what is described throughout section 2, using a plate connected to the output pins as the power output for the reducer. This design will be called the driven disk design going forwards. The second variant is conceptually the same as the first, but has fixed output pins and instead rotates the housing (called the driven housing design in this guide). 
 
 > [Standard cycloidal reducer full assembly (video)](https://youtu.be/JAcRD82Ofww)
 
-### 3.1.2 – Driven housing
+### 3.1.2 – Driven Housing
 
 The best way to conceptualize driven housing designs is to imagine the housing as being free floating and the cycloidal disk as limited in its range of motion to just its wobble. This is accomplished by mounting the output pins to a stationary plate, in this case the one the motor mounts to. This component is referred to here as the motor plate or lower pin plate. Now, when the housing interacts with the disk, the disk can’t rotate but the housing can, so it does.
 
@@ -105,7 +105,7 @@ Of course, the housing needs to be kept centered, won’t survive much torsion i
 
 > [Drivin Housing cycloidal reducer full assembly (video)](https://youtu.be/nldJB2Xw-ws)
 
-### 3.1.3 – A note on stacked disks
+### 3.1.3 – A Note on Stacked Disks
 
 While not utilized in this guide, it is common practice to reduce the vibration caused by the off center rotation of the cycloidal disk by having 2 disks in the same housing 180 degrees offset from each other. 
 
@@ -115,10 +115,10 @@ These disks will rotate in the same direction and at the same speed so their out
 
 ![Screenshot from 2021-06-04 09-00-27](https://user-images.githubusercontent.com/79012344/120805139-70a76080-c513-11eb-99f8-6b5d8582ba58.png)
 
-## 3.2 – Bearings – an epic saga
+## 3.2 – Bearings – An Epic Saga
 Anyone genuinely considering manufacturing a cycloidal drive by means of 3D printing will have likely noticed the very high number of surfaces that need to be in contact with each other in even the most basic of cycloidal designs. The good news is that all but the edge face of the cycloidal disk can be replaced by a friction reducing element, however this may not always be the best design decision. At any rate, a cycloidal drive that will carry any sort of load requires at the very least 2 bearings: 1 in the center of the cycloidal disk and another to keep the output ring centered. 
 
-### 3.2.1 – The required bearings – cycloidal disk
+### 3.2.1 – The Required Bearings – Cycloidal Disk
 The bearing in the center of the cycloidal disk (drive bearing) both relies on and can limit some of the primary dimensions of the cycloidal drive, so care should be taken when finding a bearing to use. Firstly, keep in mind that this bearing is what makes it possible to use an eccentric shaft, so some thought needs to be given to the inner dimension of the bearing so that the the desired level of eccentricity is both possible and won’t create a situation where the hole in the eccentric shaft that accepts the input shaft of the motor is extremely thin on one side. (learned that the hard way).
 
 ![Screenshot from 2021-06-04 09-03-49](https://user-images.githubusercontent.com/79012344/120805439-ce3bad00-c513-11eb-9826-c05b82470724.png)
@@ -132,14 +132,14 @@ Another point to consider is that the cycloidal disk should be a similar thickne
 
 One final element of note is that, especially with a 3D printed disk, the bearing is likely to be the heaviest spinning component, and will be spinning off center to the rest of the assembly. This can be dealt with by using a stacked design (see 3.1.1), but suffice it to say that a lighter bearing will create less vibration.
 
-### 3.2.2 – The required bearings – output pins / output ring (output bearings)
+### 3.2.2 – The Required Bearings – Output Pins / Output Ring (output bearings)
 To center the output disk/pins to the housing, it is advised that a relatively large bearing is used with an inner diameter that is able to fit around the outside of the output disk, and is therefore larger than the outer edge of the output pins. This then mounts into the housing.
 
 ![image](https://user-images.githubusercontent.com/79012344/120806667-21fac600-c515-11eb-84f3-34a339cc81d5.png)
 
 This method allows the forces applied to the output ring to be braced against the housing, which can be reinforced depending on the load required. While this method is strong and robust, it does have some drawbacks. Cost is by far the largest issue bearings of this specification can add to a project, with the example bearings (inner diameter = 45mm, outer diameter = 85mm, thickness = 7mm) costing roughly $10 per bearing, which can get quite expensive for something like a quadrupedal robot, especially when using cycloidal designs that require 2 output bearings (3.1.2). These larger bearings are also quite heavy, the aforementioned bearings in particular weigh ~50g.
 
-### 3.2.3 – Output pins
+### 3.2.3 – Output Pins
 
 Using something other than 3D printed plastic for output pins is by far the most valuable upgrade one can make to their budget cycloidal drive, because it increases the strength of the assembly by a massive degree without adding too many more individual components. The drawbacks of 3D printed output pins is quite obvious when one considers the relatively low force required to shear off the pins on the layer lines. 
 
@@ -151,13 +151,13 @@ The 2 routes one can take in making reinforced output pins are using small beari
 
 This guide uses 7mm outer diameter 3mm inner diameter nylon spacers as output pins.
 
-### 3.2.4 - Drive pins
+### 3.2.4 - Drive Pins
 Using bearings in place of 3D printed drive pins can significantly reduce wear and friction within a cycloidal drive, however these benefits come with increased weight, drive pin diameter, cost, and complexity. To that end this guide did not include testing with bearings in place of drive pins and does not have modeling instructions for them. 
 
-### 3.2.5 – A note on pressure fitting bearings
+### 3.2.5 – A Note on Pressure Fitting Bearings
 This guide requires a fair number of bearings to be pressure fit into 3D printed housings, so some thought and testing of bearing fitment should be done before printing components. It is therefore advised that you create test pieces for bearings to fit into / to fit into bearings and undergo some trial and error to find dimensions that can tightly hold or fit into a bearing without being deformed by it or requiring forceful persuasion (Take it from someone who’s broken a bearing with a hammer). When making test pieces, be sure to use the same print settings as on the final components. Time spent in this process will save on test prints later down the line.
 
-## 3.3 – Choosing the best output pin circle
+## 3.3 – Choosing an Output Pin Circle
 The output pin circle is the reference circle that passes through the center of the output holes on the cycloidal disk and through the center of the drive pins as mentioned in section 2.5. Especially on the smaller cycloidal disks used in this guide, it is of the upmost importance to ensure that the output holes on the cycloidal disk have enough material surrounding them as to not create thin weak spots in the disk for deformation or cracking to occur. A good rule of thumb is to have the output pin circle roughly centered on the disk, and try to have ~3mm of material around the holes.
 
 ![Screenshot from 2021-06-04 09-17-33](https://user-images.githubusercontent.com/79012344/120807237-bb29dc80-c515-11eb-8b3c-a01079115bd4.png)
@@ -169,7 +169,7 @@ However, this is not always possible because the inner diameter of the drive bea
 # 4 – Design & CAD
 Now for the long boring part. This section is a step-by-step guide for designing the various components of driven housing and driven disk cycloidal reducers. The reference models created for this project are provided here in .FCStd format, editable and exportable in FreeCAD.
 
-## 4.1 – Cycloidal disk
+## 4.1 – Cycloidal Disk
 This guide uses the process of modeling the cycloidal disk as the focal point for setting all major parameters of the cycloidal drive.
 
 ### 4.1.1 – Why FreeCAD?
@@ -177,14 +177,14 @@ The two common ways to model a cycloidal disk are mathematically defining it fro
 
 If, however, you would prefer to mathematically define the disk in the program of your choice, [this paper](https://blogs.solidworks.com/teacher/wp-content/uploads/sites/3/Building-a-Cycloidal-Drive-with-SOLIDWORKS.pdf) has been provided to aid in that process. 
 
-### 4.1.2 – Modeling for complete FreeCAD beginners
+### 4.1.2 – Modeling for Complete FreeCAD Beginners
 
 > [Video](https://youtu.be/ldznm4VQLB4)
 
-### 4.1.3 – Modeling for FreeCAD users
+### 4.1.3 – Modeling for FreeCAD Users
 As mentioned in the introduction, this section will be making use of a cycloidal disk generated using the FCGear workbench, so start by installing it through the Addon Manager (in the Tools tab) or through the manual instructions found on the [wiki page](https://wiki.freecadweb.org/FCGear_Workbench). It should be noted that while cycloidal disk generation is a feature of the FCGear workbench, it is not documented on its wiki.freecadweb.org page.
 
-### 4.1.4 – Generating the disk
+### 4.1.4 – Generating the Disk
 
 * Create a new file and add a new Part Design body. This guide will be using the Part Design workbench for all modeling except for the generation of the disk.
 * Within the body, use the “Gear” workbench to create a new hypocyloid gear ![image](https://user-images.githubusercontent.com/79012344/120709101-70af4e00-c48a-11eb-845b-1f0beacbdb09.png)
@@ -243,7 +243,7 @@ As mentioned in the introduction, this section will be making use of a cycloidal
                 • Indicates the version of FCGear used to generate the gear
                     ◦ It cannot be changed
 
-### 4.1.5 – Output holes
+### 4.1.5 – Output Holes
 The disk generated will be offset on the x axis by the eccentricity, which makes automatically spacing the output holes on a reference circle centered to the center of the disk rather than the origin of the model difficult, and can make creating the holes correctly after exporting to another program a pain. Ideally the disk would be moved to be centered in reference to the origin of the model, but I had difficulty making that work in the part design workbench. Those more familiar with FreeCAD may have a better solution to what is about to be shown, but this does work.
 
 First, create a sketch mapped to the top face of the disk, and use the link to external geometry tool on the center circle. 
@@ -267,7 +267,7 @@ Finally, use this sketch to cut a pocket through the disk.
 ## 4.2 – Housing
 The primary function of a cycloidal drive’s housing is to support the drive pins and accept bearings for the output disk(s), and to that end, while being one of the more complex elements from a modeling perspective, is still a relatively simple component to create.
 
-### 4.2.1 – The main body
+### 4.2.1 – The Main Body
 When modeling the housing, it’s best to start with the section that will contain the drive pins and work outwards from there. The goal of this section is to mold the drive pins into the housing for extra support rather than have them free standing.
 
 ![image](https://user-images.githubusercontent.com/79012344/120710070-b4568780-c48b-11eb-841b-23003f12eb4e.png)
@@ -292,7 +292,7 @@ This section is then extruded to the thickness of the disk that will be within i
 
 ![image](https://user-images.githubusercontent.com/79012344/120710184-d5b77380-c48b-11eb-8363-3e20c13e3f84.png)
 
-## 4.2.2 – Drive pins
+## 4.2.2 – Drive Pins
 
 The number of pins, their diameter, and their reference circle diameter were all determined in section (SECTION), so now all there is to do is model them appropriately. In this case, 31 pins (remember that the number of pins is one more than the number of lobes on the disk) with diameters of 2.7mm, on a reference circle with a radius of 28mm. Rather than model each pin in one sketch, a single pin will be modeled, extruded, and copied in a polar pattern. While not necessary, to have the pin line up visually with the default position of the disk generated in section 4.1, align this first pin on the x axis to the left of the y axis as seen in the model below.
 
@@ -302,7 +302,7 @@ The pin is then padded to the same thickness as the ring, in this case 8mm, and 
 
 ![image](https://user-images.githubusercontent.com/79012344/120710246-e9fb7080-c48b-11eb-8a8d-bf5811f2463f.png)
 
-### 4.2.3 – Bearing mounts
+### 4.2.3 – Bearing Mounts
 
 For both moving housing designs and output disk designs, there is a requirement for a large bearing at the top of the housing to center the output disk. The only difference between the two designs’ housings is that moving housing gearboxes will have another bearing on the bottom of the housing, and output disk variants will have a bearing at the top and a motor mount on the bottom. 
 
@@ -316,7 +316,7 @@ The modeling of this is extremely simple, only requiring a sketch on the top fac
 
 This is then extruded to the thickness of the bearing that will mount within it.
 
-### 4.2.4 Moving housing designs
+### 4.2.4 Moving Housing Designs
 
 For designs with a moving housing, simply repeat section 4.2.3 on the bottom side of the housing, as this will be used to mount a bearing on both sides of the gearbox.
 
@@ -326,7 +326,7 @@ How power is derived from this ring is up to the user, however for the example a
 
 ![image](https://user-images.githubusercontent.com/79012344/120710537-4068af00-c48c-11eb-8529-8fcfb8d2f983.png)
 
-### 4.2.5 Stationary housing design
+### 4.2.5 Stationary Housing Designs
 If a stationary housing is to be used, a motor mount needs to be created on the bottom of the housing. 
 
 ![image](https://user-images.githubusercontent.com/79012344/120710602-52e2e880-c48c-11eb-84fc-93a1081587b2.png)
@@ -346,10 +346,10 @@ Finally a chamfer (1mm) should be applied to the screw countersink holes to mini
 
 ![image](https://user-images.githubusercontent.com/79012344/120710693-7443d480-c48c-11eb-8333-1fdd41e25dea.png)
 
-## 4.3 – Output ring & pins
+## 4.3 – Output Ring & Pins
 Output disks and pins are perhaps the simplest component to model but bear the majority of the forces imparted onto the cycloidal drive.
 
-### 4.3.1 – Driven disk – 3d printed pins
+### 4.3.1 – Driven Disk – 3D Printed Pins
 This is the simplest version of the output disk, and integrates the output pins and output disk into one printed component. It is not advised for high load bearing applications (see 3.2.3).
 
 First, the output disk is created, which is simply a cylinder intended to fill the interior dimensions of the output bearing. In this case a 45.25 mm disk extruded to 7mm thick.
@@ -368,7 +368,7 @@ Next extrude that to the thickness of the cycloidal disk, and use a polar patter
 
 Mount whatever load is to be driven to the other side of this plate. Also, be sure to account for the motor drive shaft extending too far into the housing and fouling on the output disk. You may need to place a hole in its center to account for this.
 
-### 4.3.2 – Driven disk with nylon pins / top plate of driven housing variants
+### 4.3.2 – Driven Disk With Nylon Pins / Top Plate of Driven Housing Variants
 This is effectively the same as the 3D printed pin version, except instead of pins being mirrored with the polar pattern, holes for screws/bolts, in this case 3mm screws, are used. This plate can either be used as the driven output plate or as the top plate of driven housing designs.
 
 ![image](https://user-images.githubusercontent.com/79012344/120811332-dc8cc780-c519-11eb-8c2b-8958727d3669.png)
@@ -381,7 +381,7 @@ This is not required for using this model in driven  housing designs as the scre
 
 For driven disk designs, it’s then just a matter of screwing on nylon spacers.
 
-### 4.3.3 – Moving housing motor plate
+### 4.3.3 – Moving Housing Motor Plate
 Ideally, the motor plate of a moving housing cycloidal drive would be identical to the top plate, save for space to capture nuts for the screws running through the pins, having holes to mount the motor, and a hole for the motor drive shaft, but because in this case the motor mounting holes could not fit within the inner diameter of the output bearing, a slightly larger adapter plate was created.
 
 Example:
@@ -410,7 +410,7 @@ Finally, a centered hole, in this case 15mm in diameter is added to accommodate 
 
 ![image](https://user-images.githubusercontent.com/79012344/120811629-2e355200-c51a-11eb-908b-fe6a832149cf.png)
 
-## 4.4 – the eccentric shaft
+## 4.4 – The Eccentric Shaft
 The design of the eccentric shaft is heavily dependent on the motor drive shaft that it interacts with, however the base concept of the shaft being offset from the input shaft is constant. In this case, a D shaft coming from a nema 17 motor is the input shaft, and a very simple eccentric shaft was created to cover the entire 18mm section of the motor output shaft with a flat side machined onto it. 
 
 First, a hole tested to snugly accept the D shaft was modeled.
