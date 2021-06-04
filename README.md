@@ -214,7 +214,7 @@ As mentioned in the introduction, this section will be making use of a cycloidal
                     ◦ Finding the right eccentricity is a balance between what can be produced using your drive bearing (see 3.2.1 for more) and what is possible given the constraints of how tightly packed the drive pins are.
                     ◦ Eccentricity also refers to how aggressive the lobes of the disk are, basically how far into the disk the drive pins go.
                         ▪ Because of this, it’s best to have a relatively high eccentricity to increase the lifespan of the drive, because less aggressive lobes will round over more easily.
-                            • Eccentricity cannot be set infinitely large, though. To this end is advised that eccentricity is the last value set if all other values are known, so that trial and error can be used to get the highest eccentricity disk that is still solvable. Add more here about disks not being valid and solvable
+                            • Eccentricity cannot be set infinitely large, though. To this end is advised that eccentricity is the last value set if all other values are known, so that trial and error can be used to get the highest eccentricity disk that is still solvable.
             ▪ hole_radius
                 • The radius of the center hole that will accept the drive bearing. See 3.2.5 for pressure fitting this bearing properly.
             ▪ pin_circle_radius
@@ -279,7 +279,6 @@ To accomplish this, first take the pin circle diameter (remember to convert from
 Because the eccentricity of the disk is just effectively how far it extends towards the pins and how deep the troughs are, adding 4 times the eccentricity to this value will give the maximum diameter of the area the disk will travel in, and thus the minimum size for the inner diameter of this part of the housing. In this case, 53.3 + 4(0.8) = 56.5. Multiplying the eccentricity by 4 may seem counterintuitive at first, but remember that it refers to the height of the peaks and depths of the troughs in terms of a center line in the middle of them, hence multiplying it by 2, and it is also in terms of the radius, so when working with diameters one has to multiply it by 2 again.
 
 This plus preferably an extra 0.5mm at least (preferably more, but when working at this scale there simply isn’t much space to be spared) for extra clearance to accommodate for the disk being slightly too large or the housing flexing gives the inner diameter for the pin section of the housing.
-
 
 The outer diameter  of this section will determine the external diameter of the rest of the gearbox, and may need to change later depending on if the bearing for the output disk requires more space to be mounted. This value should be no less than 3mm to prevent significant flexing of the housing.
 
