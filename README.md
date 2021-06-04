@@ -171,14 +171,14 @@ This guide uses the process of modeling the cycloidal disk as the focal point fo
 ### 4.1.1 – Why FreeCAD?
 The two common ways to model a cycloidal disk are mathematically defining it from scratch as a curve, or using a disk generation tool that creates a disk based on easily inputted parameters. This guide is aimed at beginners to cycloidal gearing, and so it was decided that a disk generation tool should be used to lower the overall difficulty for the end user. Because FreeCAD was used for all modeling in this project, the [FCGear workbench](https://wiki.freecadweb.org/FCGear_Workbench) was used to generate the disk. However, because this guide is intended to be usable agnostic of the chosen modeling software, this section has been split into a video which walks a user through the complete process, from installing FreeCAD to exporting the disk for printing; and a written section intended for those already familiar with FreeCAD.
 
-If, however, you would prefer to mathematically define the disk in the program of your choice, this paper has been provided to aid in that process. [Link here](https://blogs.solidworks.com/teacher/wp-content/uploads/sites/3/Building-a-Cycloidal-Drive-with-SOLIDWORKS.pdf)
+If, however, you would prefer to mathematically define the disk in the program of your choice, [this paper](https://blogs.solidworks.com/teacher/wp-content/uploads/sites/3/Building-a-Cycloidal-Drive-with-SOLIDWORKS.pdf) has been provided to aid in that process. 
 
 ### 4.1.2 – Modeling for complete FreeCAD beginners
 
-> The video isn’t uploading properly, please hold
+> [Video](https://youtu.be/ldznm4VQLB4)
 
 ### 4.1.3 – Modeling for FreeCAD users
-As mentioned in the introduction, this section will be making use of a cycloidal disk generated using the FCGear workbench, so start by installing it through the Addon Manager (in the Tools tab) or through the manual instructions found on the wiki page (link to wiki). It should be noted that while cycloidal disk generation is a feature of the FCGear workbench, it is not documented on its wiki.freecadweb.org page.
+As mentioned in the introduction, this section will be making use of a cycloidal disk generated using the FCGear workbench, so start by installing it through the Addon Manager (in the Tools tab) or through the manual instructions found on the [wiki page](https://wiki.freecadweb.org/FCGear_Workbench). It should be noted that while cycloidal disk generation is a feature of the FCGear workbench, it is not documented on its wiki.freecadweb.org page.
 
 ### 4.1.4 – Generating the disk
 
