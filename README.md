@@ -1,15 +1,15 @@
-This guide was created for a senior capstone project at Templeton Academy based on this research question: 
-
-What are the appropriate use cases for, benefits and drawbacks of, and best construction practices for common complex gear sets in terms of 3d printed hobbyist construction for high torque applications?
-
-It does not answer that question (see section 5).
-
 # Sections
 ## 1 – Intro
 ## 2 – The concepts and components
 ## 3 – Reality
 ## 4 – 3D Modeling
 ## 5 – Closing and sources
+
+This guide was created for a senior capstone project at Templeton Academy based on this research question: 
+
+What are the appropriate use cases for, benefits and drawbacks of, and best construction practices for common complex gear sets in terms of 3d printed hobbyist construction for high torque applications?
+
+It does not answer that question (see section 5).
 
 # 1.1 – Introduction
 Cycloidal drives/reducers are extremely useful components to have at one’s disposal when working in hobbyist robotics, however a lot of the material aimed at beginners tend to be lacking in substance, missing practical application, or in some way fail to offer a complete guide through creating cycloidal drives from scratch. This is not to say that there aren’t useful materials out there, it’s just that one often has to cobble a number of them together to integrate cycloidal gearing into their project. Thus, this document was created to be a plain English single resource for understanding the theory of operation behind cycloidal drives, and understanding the methods of and best practices for their construction.
