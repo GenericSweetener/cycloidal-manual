@@ -262,17 +262,14 @@ The primary function of a cycloidal drive’s housing is to support the drive pi
 ### 4.2.1 – The main body
 When modeling the housing, it’s best to start with the section that will contain the drive pins and work outwards from there. The goal of this section is to mold the drive pins into the housing for extra support rather than have them free standing.
 
-Example:
 ![image](https://user-images.githubusercontent.com/79012344/120710070-b4568780-c48b-11eb-841b-23003f12eb4e.png)
 
 The most important value to consider here is the inner diameter of the hollow cylinder that makes up this section. The pins contact with the housing should be maximized, but not the the point of  interfering with the cycloidal disk’s travel. 
 
-Example:
 ![image](https://user-images.githubusercontent.com/79012344/120710099-bcaec280-c48b-11eb-9a89-a7abdba5f51f.png)
 
 To accomplish this, first take the pin circle diameter (remember to convert from the radius) as determined in (SECTION), and then subtract the pin diameter from it. In this example that would be 56 – 2.7 = 53.3. This gives a circle around the inner edge of the pins:
 
-Example:
 ![image](https://user-images.githubusercontent.com/79012344/120710136-c6d0c100-c48b-11eb-8037-563e30016fae.png)
 
 Because the eccentricity of the disk is just effectively how far it extends towards the pins and how deep the troughs are, adding 4 times the eccentricity to this value will give the maximum diameter of the area the disk will travel in, and thus the minimum size for the inner diameter of this part of the housing. In this case, 53.3 + 4(0.8) = 56.5. Multiplying the eccentricity by 4 may seem counter intuitive at first, but remember that it refers to the height of the peaks and depths of the troughs in terms of a center line in the middle of them, hence multiplying it by 2, and it is also in terms of the radius, so when working with diameters one has to multiply it by 2 again.
@@ -282,24 +279,20 @@ This plus preferably an extra 0.5mm at least (preferably more, but when working 
 
 The outer diameter  of this section will determine the external diameter of the rest of the gearbox, and may need to change later depending on if the bearing for the output disk requires more space to be mounted. This value should be no less than 3mm to prevent significant flexing of the housing.
 
-Model:
 ![image](https://user-images.githubusercontent.com/79012344/120710160-ce906580-c48b-11eb-851c-71300c44abcf.png)
 
 This section is then extruded to the thickness of the disk that will be within it plus a millimeter or so of extra clearance to prevent it from rubbing on the top and bottom of the gearbox. In this case, the housing will be extruded by 8mm.
 
-Model:
 ![image](https://user-images.githubusercontent.com/79012344/120710184-d5b77380-c48b-11eb-8363-3e20c13e3f84.png)
 
 ## 4.2.2 – Drive pins
 
 The number of pins, their diameter, and their reference circle diameter were all determined in section (SECTION), so now all there is to do is model them appropriately. In this case, 31 pins (remember that the number of pins is one more than the number of lobes on the disk) with diameters of 2.7mm, on a reference circle with a radius of 28mm. Rather than model each pin in one sketch, a single pin will be modeled, extruded, and copied in a polar pattern. While not necessary, to have the pin line up visually with the default position of the disk generated in section 4.1, align this first pin on the x axis to the left of the y axis as seen in the model below.
 
-Model:
 ![image](https://user-images.githubusercontent.com/79012344/120710219-e10a9f00-c48b-11eb-94f9-71ae9a8c9a9b.png)
 
 The pin is then padded to the same thickness as the ring, in this case 8mm, and then copied in a polar pattern, in this case 31 times.
 
-Model:
 ![image](https://user-images.githubusercontent.com/79012344/120710246-e9fb7080-c48b-11eb-8a8d-bf5811f2463f.png)
 
 ### 4.2.3 – Bearing mounts
@@ -308,13 +301,9 @@ For both moving housing designs and output disk designs, there is a requirement 
 
 This is where cooperation between bearing choice and housing size come into play, because the ideal outer diameter for the output bearing is slightly larger than the inner diameter of the housing.  IT should be such that the hole it press fits into does not hang over the rest of the housing, which both means that during construction the disk can be inserted and during printing support material is not required. The outer diameter of the bearing should also not be too large as to require the housing’s total diameter to be increased to accommodate for it. To that end, a bearing with an outer diameter of 58mm was used. This was as close to perfect as the size constraints and bearing availability would allow.
 
-Example:
-
 ![image](https://user-images.githubusercontent.com/79012344/120710303-ff709a80-c48b-11eb-9654-78ae81c9453b.png)
 
 The modeling of this is extremely simple, only requiring a sketch on the top face of the housing with a central hole capable of fitting the bearing, in this case 58.15mm, and an external diameter set equal to the other housing section. If the bearing section’s wall is too thin (preferably 3mm), increase the overall diameter.
-
-Model:
 
 ![image](https://user-images.githubusercontent.com/79012344/120710410-1adba580-c48c-11eb-8ec5-7f4a8f8cdb17.png)
 
@@ -324,27 +313,19 @@ This is then extruded to the thickness of the bearing that will mount within it.
 
 For designs with a moving housing, simply repeat section 4.2.3 on the bottom side of the housing, as this will be used to mount a bearing on both sides of the gearbox.
 
-Model:
-
 ![image](https://user-images.githubusercontent.com/79012344/120710516-39da3780-c48c-11eb-980e-a3bc5784c283.png)
 
 How power is derived from this ring is up to the user, however for the example application a hole for REV Robotics 15mm x channel has been modeled.
-
-Example:
 
 ![image](https://user-images.githubusercontent.com/79012344/120710537-4068af00-c48c-11eb-8529-8fcfb8d2f983.png)
 
 ### 4.2.5 Stationary housing design
 If a stationary housing is to be used, a motor mount needs to be created on the bottom of the housing. 
 
-Example:
-
 ![image](https://user-images.githubusercontent.com/79012344/120710602-52e2e880-c48c-11eb-84fc-93a1081587b2.png)
 
 
 To create a motor mount, create a sketch on the bottom face of the housing with an outer diameter matching that of the housing, and holes for the motor screws and a space for the drive shaft to enter the housing.
-
-Model:
 
 ![image](https://user-images.githubusercontent.com/79012344/120710649-6726e580-c48c-11eb-9255-02e32c741d8a.png)
 
@@ -352,13 +333,9 @@ For the example nema 17 motor, a centered square pattern of 4 m3 screws spaced 3
 
 The screw holes will need to be countersunk to avoid the cycloidal disk fouling on them. So, when extruding the motor mount plate, take into account both the space taken by countersinking the screws and having enough material for them to mount to. In this case, the screw heads are 2mm tall and ~6mm in diameter, so the bottom plate will be extruded 5mm to allow for 2mm of countersinking and 3mm of material underneath them.
 
-Model:
-
 ![image](https://user-images.githubusercontent.com/79012344/120710667-6db55d00-c48c-11eb-89cd-cfe463059f3f.png)
 
 Finally a chamfer (1mm) should be applied to the screw countersink holes to minimize friction between their edge and the disk.
-
-Model:
 
 ![image](https://user-images.githubusercontent.com/79012344/120710693-7443d480-c48c-11eb-8333-1fdd41e25dea.png)
 
