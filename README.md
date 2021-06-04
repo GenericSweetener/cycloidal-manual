@@ -109,7 +109,7 @@ While not utilized in this guide, it is common practice to reduce the vibration 
 
 These disks will rotate in the same direction and at the same speed so their output holes still line up with each other (provided they are symmetrical across both the x and y axis). This means that while rotation is still taking place, the shifting weight of one disk is always offset by the other. To accomplish this the eccentric shaft is split into 2 cams so the top and bottom disks are driven 180 degrees offset from each other.
 
-> Screenshot from 2021-06-03 16-28-52
+![Screenshot from 2021-06-04 09-00-27](https://user-images.githubusercontent.com/79012344/120805139-70a76080-c513-11eb-99f8-6b5d8582ba58.png)
 
 ## 3.2 – Bearings – an epic saga
 Anyone genuinely considering manufacturing a cycloidal drive by means of 3D printing will have likely noticed the very high number of surfaces that need to be in contact with each other in even the most basic of cycloidal designs. The good news is that all but the edge face of the cycloidal disk can be replaced by a friction reducing element, however this may not always be the best design decision. At any rate, a cycloidal drive that will carry any sort of load requires at the very least 2 bearings: 1 in the center of the cycloidal disk and another to keep the output ring centered. 
@@ -117,22 +117,21 @@ Anyone genuinely considering manufacturing a cycloidal drive by means of 3D prin
 ### 3.2.1 – The required bearings – cycloidal disk
 The bearing in the center of the cycloidal disk both relies on and can limit some of the primary dimensions of the cycloidal drive, so care should be taken when finding a bearing to use. Firstly, keep in mind that this bearing is what makes it possible to use an eccentric shaft, so some thought needs to be given to the inner dimension of the bearing so that the the desired level of eccentricity is both possible and won’t create a situation where the hole in the eccentric shaft that accepts the input shaft of the motor is extremely thin on one side. 
 
-> (image)
+![Screenshot from 2021-06-04 09-03-49](https://user-images.githubusercontent.com/79012344/120805439-ce3bad00-c513-11eb-9826-c05b82470724.png)
+
 
 A good rule of thumb is that (assuming the eccentric shaft is accepting a metal output shaft from the motor) the inner diameter of the bearing should be equal to the diameter of the motor output shaft plus the disk’s eccentricity plus however thick you want the thinnest part of the eccentric shaft to be (at least 3mm).
 
-> (bearing spacing inkscape image)
-
 Another point to consider is that the cycloidal disk should be a similar thickness to the bearing. This ensures that the bearing will be able to transfer power to the entire edge of the cycloidal disk. It’s also a good idea to have a ridge of some sort modeled in the hole for the bearing so it can be pressure fit until bottoming out.
 
-> (Image of ridge)
+![Screenshot from 2021-06-04 09-05-26](https://user-images.githubusercontent.com/79012344/120805664-093de080-c514-11eb-99e9-ee21f2e4e896.png)
 
 One final element of note is that, especially with a 3D printed disk, the bearing is likely to be the heaviest spinning component, and will be spinning off center to the rest of the assembly. This can be dealth with by using a stacked design (see 3.1.1), but suffice it to say that a lighter bearing will create less vibration.
 
 ### 3.2.2 – The required bearings – output pins / output ring
 To center the output disk/pins to the housing, it is advised that a relatively large bearing with an inner diameter that is able to fit around the outside of the output disk, and is therefore larger than the outer edge of the output pins. This then mounts into the housing.
 
-> (image)
+![image](https://user-images.githubusercontent.com/79012344/120806667-21fac600-c515-11eb-84f3-34a339cc81d5.png)
 
 This method allows the forces applied to the output ring to be braced against the housing, which can be reinforced depending on the load required. While this method is strong and robust, it does have some drawbacks. Cost is by far the largest issue bearings of this specification can add to a project, with the example bearings (inner diameter = 45mm, outer diameter = 85mm, thickness = 7mm) costing roughly $10 per bearing, which can get quite expensive for something like a quadrupedal robot, especially when using cycloidal designs that require 2 output bearings (3.1.2). These larger bearings are also quite heavy, the aforementioned bearings in particular weigh ~50g.
 
@@ -140,7 +139,7 @@ This method allows the forces applied to the output ring to be braced against th
 
 Using something other than 3D printed plastic for output pins is by far the most valuable upgrade one can make to their budget cycloidal drive, because it increases the strength of the assembly by a massive degree without adding too many more individual components. The drawbacks of 3D printing output pins is quite obvious when one considers the relatively low force required to sheer off the pins on the layer lines. 
 
-> (Image of pins, failure gif, image of sheered pins)
+![Screenshot from 2021-06-04 09-15-10](https://user-images.githubusercontent.com/79012344/120806940-6f773300-c515-11eb-8493-91bb29bfee7f.png)
 
 The 2 routes one can take in making reinforced output pins are using small bearings or using round nylon standoff spacers in place of 3D printed output pins. The only real difference from a modeling and construction perspective is that rather than modeling pins to be printed on the output disk, one would have holes through it, potentially with hexagonal holes on the other side going partially through it to capture a nut. And of course a bolt/screw and a nut is necessary to keep the bearing / nylon spacer in place.
 
@@ -157,11 +156,12 @@ This guide requires a fair number of bearings to be pressure fit into 3D printed
 ## 3.3 – Choosing the best output pin circle
 The output pin circle is the reference circle that passes through the center of the output holes on the cycloidal disk and through the center of the drive pins as mentioned in section 2.5. Especially on the smaller cycloidal disks used in this guide, it is of the upmost importance to ensure that the output holes on the cycloidal disk have enough material surrounding them as to not create weak thin spots in the disk for deformation or cracking to occur. A good rule of thumb is to have the output pin circle roughly centered on the disk.
 
->(image)
+![Screenshot from 2021-06-04 09-17-33](https://user-images.githubusercontent.com/79012344/120807237-bb29dc80-c515-11eb-8b3c-a01079115bd4.png)
 
 However, this is not always possible because the inner diameter of the drive bearing can limit the maximum size of the output pin circle, and should also be taken into account. This is why the output holes on the reference models provided are not perfectly centered on the cycloidal disk.
 
 # 4 – Design & CAD
+Now for the boring part. This section is a step-by-step guide for designing the various components of driven housing and driven disk cycloidal reducers. The reference models created for this project are provided here in .FCStd format, editable and exportable in FreeCAD.
 
 ## 4.1 – Cycloidal disk
 This guide uses the process of modeling the cycloidal disk as the focal point for setting all major parameters of the cycloidal drive. To that end, the specific parameters to be considered and their effects on the final product will be discussed in this section.
@@ -169,10 +169,11 @@ This guide uses the process of modeling the cycloidal disk as the focal point fo
 ### 4.1.1 – Why FreeCAD?
 The two most common ways to model a cycloidal disk are mathematically defining it from scratch as a curve, or using a disk generation tool that creates a disk based on easily inputted parameters. This guide is aimed at beginners to cycloidal gearing, and so it was decided that a disk generation tool should be used to lower the overall difficulty for the end user. Because FreeCAD was used for all the modeling in this project, the FCGear workbench (link to wiki) was used to generate the disk. However, because this guide is intended to be usable agnostic of the chosen modeling software, this section has been split into a video which walks a user through the complete process, from installing FreeCAD to exporting the disk for printing; and a written section intended for those already familiar with FreeCAD.
 
-If, however, you would prefer to mathematically define the disk in the program of your choice, this paper has been provided to aid in that process (link)
+If, however, you would prefer to mathematically define the disk in the program of your choice, this paper has been provided to aid in that process [link](https://blogs.solidworks.com/teacher/wp-content/uploads/sites/3/Building-a-Cycloidal-Drive-with-SOLIDWORKS.pdf)
 
 ### 4.1.2 – Modeling for complete FreeCAD beginners
-The video isn’t uploading properly, please hold
+
+> The video isn’t uploading properly, please hold
 
 ### 4.1.3 – Modeling for FreeCAD users
 As mentioned in the introduction, this section will be making use of a cycloidal disk generated using the FCGear workbench, so start by installing it through the Addon Manager (in the Tools tab) or through the manual instructions found on the wiki page (link to wiki). It should be noted that while cycloidal disk generation is a feature of the FCGear workbench, it is not documented on its wiki.freecadweb.org page.
