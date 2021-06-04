@@ -3,7 +3,7 @@
 ## 2 – [The Concepts and Components](https://github.com/GenericSweetener/cycloidal-manual/blob/main/README.md#21--the-concepts-and-components)
 ## 3 – [Snap Back to Reality](https://github.com/GenericSweetener/cycloidal-manual/blob/main/README.md#3--snap-back-to-reality-1)
 ## 4 – [Design & CAD](https://github.com/GenericSweetener/cycloidal-manual/blob/main/README.md#4--design--cad)
-## 5 – [Closing and Sources](https://github.com/GenericSweetener/cycloidal-manual/blob/main/README.md#5--closing-and-sources)
+## 5 – [Closing and Sources](https://github.com/GenericSweetener/cycloidal-manual/blob/main/README.md#5--closing)
 
 This guide was created for a senior capstone project at Templeton Academy based on this research question: 
 
