@@ -1,7 +1,7 @@
 # Sections
 ## 1 – [Intro](https://github.com/GenericSweetener/cycloidal-manual/blob/main/README.md#11--introduction)
-## 2 – The concepts and components
-## 3 – Reality
+## 2 – [The Concepts and Components](https://github.com/GenericSweetener/cycloidal-manual/blob/main/README.md#21--the-concepts-and-components)
+## 3 – [Snap Back to Reality]()
 ## 4 – 3D Modeling
 ## 5 – Closing and sources
 
@@ -14,20 +14,20 @@ It does not answer that question (see section 5).
 # 1.1 – Introduction
 Cycloidal drives/reducers are extremely useful components to have at one’s disposal when working in hobbyist robotics, however a lot of the material aimed at beginners tend to be lacking in substance, missing practical application, or in some way fail to offer a complete guide through creating cycloidal drives from scratch. This is not to say that there aren’t useful materials out there, it’s just that one often has to cobble a number of them together to integrate cycloidal gearing into their project. Thus, this document was created to be a plain English single resource for understanding the theory of operation behind cycloidal drives, and understanding the methods of and best practices for their construction.
 
-## 1.2 – The target and scope
+## 1.2 – The Target and Scope
 Cycloidal drives have a broad range of uses in a number of fields and applications, but with that comes an extremely broad range of appropriate contents for this document. To that end, the scope of this guide has been limited somewhat by the project that sparked it, namely the joints of a low budget quadrupedal robot, called S.N.O.T (Sub-Nominal Operations Testbed) (will be linked here if files are ever published). S.N.O.T uses nema 17 stepper motors for all joints (a poor decision in retrospect) which are capable of outputting ~0.34 N⋅m of torque. The gearboxes created for this project are intended to fit into a modular system created for S.N.O.T that has space for gearboxes 60mm in diameter and ~22mm thick. The chosen target gear ratio for the cycloidal drives is 30:1, which while likely not enough to walk with, is plenty for experimenting on the test stand. The reducers are also required to be as cost reduced as possible to fit within the budget, and will be primarily 3D printed.
 
 TLDR; We’re using nema 17 stepper motors to power 3D printed cycloidal drives of a similar footprint in robotic leg joints.
 
-## 1.3 – Materials, tooling, and software
+## 1.3 – Materials, Tooling, and Software
 Unless otherwise stated, all modeling for this project has been done in FreeCAD, sliced for printing in Ultimaker Cura, and printed on an Creality Ender 3 using Overture PLA filament.
 
 While all modeling was done in FreeCAD, this guide is intended to be usable with any parametric modeling software, save for the creation of the cycloidal disk (see section 4.1.1 for more). 
 
-# 2.1 – The concepts and components
+# 2.1 – The Concepts and Components
 While this guide gets around having the user complete the majority of the complex math behind the concept of cycloidal gearing, an understanding of the theory of operation and components therein is still vital to utilizing the rest of this guide.
 
-## 2.2 – The basics
+## 2.2 – The Basics
 
 Cycloidal drives offer a relatively high torque density, especially compared to standard involute gearing. The way this is accomplished is visually complex, but simple enough when stripped down to the base concepts. As the name suggests, cycloidal drives rely on the concept of cycloidal, or more specifically, hypocycloidal paths. A cycloidal path is effectively the result of rolling a circle along a straight line, tracking a single point on the diameter of the circle, and plotting the position of that point as the circle rolls as a new line.  
 
@@ -40,7 +40,7 @@ Hypocycloidal paths are the same as cycloidal paths, except the circle is rollin
 
 While every element of a cycloidal drive is not a direct product of this concept, they all have something to do with the idea of a circle rolling around within another circle, so just keep that in mind.
 
-## 2.3 – Getting a grip (base understanding)
+## 2.3 – Getting a Grip (base understanding)
 <img src="https://user-images.githubusercontent.com/79012344/120367491-ec6c9780-c2de-11eb-9e0b-7f542085e93b.gif" width="500">
 
 > By Petteri Aimonen - Own work, Public Domain, https://commons.wikimedia.org/w/index.php?curid=7732225
@@ -60,7 +60,7 @@ This both means that the power source/motor is isolated in terms of rotational s
 
 However, even if this were taking place in an ideal world where no power was lost to friction, and the cycloidal disk never slipped, there is still no mechanism by which to actually utilize the power being transferred, because the cycloidal disk is not centered and can’t have an output shaft mounted directly to it.
 
-## 2.5 – Getting an output (output pins and holes)
+## 2.5 – Getting an Output (output pins and holes)
 Getting power out of a cycloidal drive is less about directly connecting the cycloidal disk to an output shaft and more to do with rectifying the wobbling motion of the disk as it rotates so that the gear reduction created can actually be used. This is where the output holes and pins seen in the animation (purple) come into play. The rectifying method of choice here uses at least 3 (normally more) holes in the cycloidal disk spaced equally in a circular pattern on its face, shown below on a reference circle of a known size. 
 
 ![Screenshot from 2021-06-03 16-17-28](https://user-images.githubusercontent.com/79012344/120706625-53c54b80-c487-11eb-936c-33393a05f40b.png)
@@ -71,7 +71,7 @@ These holes then correspond to output pins/rollers that are arranged in the same
 
 hese pins are mounted to a surface that can rotate, called the output disk (seen in purple in the animation), which is centered by a bearing of some sort in reference to the housing. What makes it possible for these output pins to mesh with the holes of the disk even though the disk is not centered while rotating is that the disk’s holes are the same as the diameter as the output pins plus the eccentricity of the disk. This in effect means that while the output pins are never centered in the output holes, their sides are able to contact the edges of the holes, rolling along the inside of the output holes and being pushed in the correct direction. This is why there need to be more than one set of pins and holes to prevent slop in the output from the pins not being directly attached to the disk, instead requiring multiple angles of contact.
 
-## 2.6 - Getting it to work (the cycloidal disk and drive pins)
+## 2.6 - Getting It To Work (the cycloidal disk and drive pins)
 Up until this point, a simplified model of the actual mechanism by which the gear reduction is created has been used to demonstrate the concepts around it, however this model would be extremely inefficient and borderline useless in any practical application. So, instead of relying on the friction between a smooth cycloidal disk and its housing, cycloidal drives use a set of drive  pins/rollers in the housing (silver), and a disk with corresponding lobes for those pins which is the cycloidal disk (yellow). 
 
 <img src="https://user-images.githubusercontent.com/79012344/120367491-ec6c9780-c2de-11eb-9e0b-7f542085e93b.gif" width="500">
@@ -86,7 +86,7 @@ That’s just going to bind up.
 
 This is why, in this guide and in most cycloidal reducer designs, there is one more pin on the housing than there are lobes on the disk. Not only does this make room for the rolling motion to be possible in the first place, it defines the transmission ratio of the reducer in more solid terms than the difference between the circumference of 2 circles. This is to say that for every full rotation of the input shaft, the disk moves 1 (or whatever the difference between the number of pins and lobes is) pin over. With this knowledge, the gear ratio can be defined. In this example of 30 pins on the disk and 31 pins in the housing, it would take 30 rotations of the input shaft to make one full rotation of the cycloidal disk, making the transmission ratio 30:1.
 
-## 3 – Snap back to reality
+## 3 – Snap Back to Reality
 An understanding of the theory of operation is only so good as the practical application of those concepts. To that end, this section will translate the concepts from section 2 to what one may actually want to manufacture.
 
 ## 3.1 – Variants of the design
