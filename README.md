@@ -95,11 +95,11 @@ This guide offers 2 main variants of the cycloidal reducer. The first is what is
 
 The best way to conceptualize driven housing designs is to imagine the housing as being free floating and the cycloidal disk as limited in its range of motion to it’s wobble. This is accomplished by mounting the output pins to a stationary plate, in this case the one the motor mounts to. This component is referred to as the motor plate. Now, when the housing interacts with the disk, the disk can’t rotate but the housing can, so it does.
 
-> [Drivin Housing cycloidal reducer full assembly (video)](https://youtu.be/nldJB2Xw-ws)
+> [Moving housing cycloidal drive in operation (video)](https://youtu.be/8ANe9f_OlMg)
 
 Of course, the housing needs to be kept centered, won’t survive much torsion if only supported on one side, and the forces applied to it shouldn’t be transferred to the cycloidal disk, so it’s stabilized by a bearing on the top and bottom. The bottom bearing connects to the motor plate, and the top bearing connects to a plate that has screws running down through the drive pins to connect to the motor plate.
 
-> [Moving housing cycloidal drive in operation (video)](https://youtu.be/8ANe9f_OlMg)
+> [Drivin Housing cycloidal reducer full assembly (video)](https://youtu.be/nldJB2Xw-ws)
 
 ### 3.1.3 – A note on stacked disks
 
