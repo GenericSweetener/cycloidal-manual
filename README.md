@@ -167,7 +167,7 @@ This guide uses the process of modeling the cycloidal disk as the focal point fo
 ### 4.1.1 – Why FreeCAD?
 The two most common ways to model a cycloidal disk are mathematically defining it from scratch as a curve, or using a disk generation tool that creates a disk based on easily inputted parameters. This guide is aimed at beginners to cycloidal gearing, and so it was decided that a disk generation tool should be used to lower the overall difficulty for the end user. Because FreeCAD was used for all the modeling in this project, the FCGear workbench (link to wiki) was used to generate the disk. However, because this guide is intended to be usable agnostic of the chosen modeling software, this section has been split into a video which walks a user through the complete process, from installing FreeCAD to exporting the disk for printing; and a written section intended for those already familiar with FreeCAD.
 
-If, however, you would prefer to mathematically define the disk in the program of your choice, this paper has been provided to aid in that process [link](https://blogs.solidworks.com/teacher/wp-content/uploads/sites/3/Building-a-Cycloidal-Drive-with-SOLIDWORKS.pdf)
+If, however, you would prefer to mathematically define the disk in the program of your choice, this paper has been provided to aid in that process. [Link here](https://blogs.solidworks.com/teacher/wp-content/uploads/sites/3/Building-a-Cycloidal-Drive-with-SOLIDWORKS.pdf)
 
 ### 4.1.2 – Modeling for complete FreeCAD beginners
 
